@@ -1,0 +1,128 @@
+﻿using CapaNegocio;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace SistemaCabañas
+{
+    public partial class FrmBuscarHabitacion : Form
+    {
+        HabitacionesBL objbl =
+    new HabitacionesBL();
+
+        public int IdHabitacion;
+
+        public string Habitacion;
+
+        public decimal Precio;
+
+        public FrmBuscarHabitacion()
+        {
+            InitializeComponent();
+        }
+
+        private void FrmBuscarHabitacion_Load(object sender, EventArgs e)
+        {
+            MostrarHabitaciones();
+
+            dataGridView1.ClearSelection();
+
+            dataGridView1.ReadOnly = true;
+
+            dataGridView1.SelectionMode =
+                DataGridViewSelectionMode.FullRowSelect;
+
+            dataGridView1.MultiSelect = false;
+        }
+
+        public void MostrarHabitaciones()
+        {
+            dataGridView1.DataSource =
+                objbl.MostrarHabitaciones();
+
+            dataGridView1.Columns[0].Visible =
+                false;
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                IdHabitacion =
+                    Convert.ToInt32
+                    (
+                        dataGridView1.SelectedRows[0].Cells[0].Value
+                    );
+
+                Habitacion =
+                    dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show
+                (
+                    "Seleccione una habitación"
+                );
+            }
+
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if
+   (
+       dataGridView1.Columns[e.ColumnIndex]
+       .Name == "Estado"
+   )
+            {
+                if (e.Value != null)
+                {
+                    var estado =
+                    e.Value.ToString();
+
+                    if (estado == "Disponible")
+                    {
+                        dataGridView1.Rows[e.RowIndex]
+                        .Cells[e.ColumnIndex]
+                        .Style.BackColor =
+                        Color.LightGreen;
+
+                        dataGridView1.Rows[e.RowIndex]
+                        .Cells[e.ColumnIndex]
+                        .Style.ForeColor =
+                        Color.Black;
+                    }
+
+                    else if (estado == "Ocupada")
+                    {
+                        dataGridView1.Rows[e.RowIndex]
+                        .Cells[e.ColumnIndex]
+                        .Style.BackColor =
+                        Color.IndianRed;
+
+                        dataGridView1.Rows[e.RowIndex]
+                        .Cells[e.ColumnIndex]
+                        .Style.ForeColor =
+                        Color.White;
+                    }
+
+                    else if (estado == "Limpieza")
+                    {
+                        dataGridView1.Rows[e.RowIndex]
+                        .Cells[e.ColumnIndex]
+                        .Style.BackColor =
+                        Color.Khaki;
+
+                        dataGridView1.Rows[e.RowIndex]
+                        .Cells[e.ColumnIndex]
+                        .Style.ForeColor =
+                        Color.Black;
+                    }
+                }
+            }
+        }
+    }
+}
