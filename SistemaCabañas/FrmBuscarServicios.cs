@@ -76,6 +76,8 @@ new ServiciosBL();
                 cantidad,
                 subtotal
             );
+
+            numericUpDown1.Value = 0;
         }
 
         public void MostrarServicios()

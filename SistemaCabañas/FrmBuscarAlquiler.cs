@@ -82,10 +82,16 @@ Convert.ToInt32
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             IdAlquiler =
-               Convert.ToInt32
-               (
-                   dataGridView1.CurrentRow.Cells[0].Value
-               );
+    Convert.ToInt32
+    (
+        dataGridView1.CurrentRow.Cells[0].Value
+    );
+
+            Total =
+            Convert.ToDecimal
+            (
+                dataGridView1.CurrentRow.Cells["Total"].Value
+            );
 
             this.Close();
         }

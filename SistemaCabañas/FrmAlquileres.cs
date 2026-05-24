@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-using System.Xml.Linq;
+
 
 
 namespace SistemaCabañas
@@ -25,6 +25,7 @@ namespace SistemaCabañas
         public int IdUsuario;
 
         public int IdHabitacion;
+
 
         decimal precioHabitacion = 0;
 
@@ -141,7 +142,7 @@ namespace SistemaCabañas
 
             dataGridView2.ClearSelection();
 
-/*
+
             if (RolUsuario == "Empleado")
             {
                 button4.Visible = false;
@@ -154,7 +155,7 @@ namespace SistemaCabañas
                 button4.Visible = false;
                 button5.Visible = false;
                 button11.Visible = false;
-            }*/
+            }
 
         }
 
@@ -253,7 +254,7 @@ namespace SistemaCabañas
                     return;
                 }
 
-               /* if (textBox4.Text == "")
+                if (textBox4.Text == "")
                 {
                     MessageBox.Show
                     (
@@ -261,7 +262,7 @@ namespace SistemaCabañas
                     );
 
                     return;
-                }*/
+                }
 
                 if (comboBox1.Text == "")
                 {
@@ -273,12 +274,27 @@ namespace SistemaCabañas
                     return;
                 }
 
+                if
+(
+    dateTimePicker3.Value
+    <=
+    dateTimePicker2.Value
+)
+                {
+                    MessageBox.Show
+                    (
+                        "La hora salida debe ser mayor"
+                    );
+
+                    return;
+                }
+
                 objent.Id_Cliente =
      IdCliente;
 
                 objent.Id_Usuario =
     IdUsuario;
-
+                
                 objent.Id_Habitacion =
       IdHabitacion;
 
@@ -362,7 +378,7 @@ namespace SistemaCabañas
                     );
                 }
 
-            // /limpiar();
+            Limpiar();
             }
             catch (Exception ex)
             {
@@ -404,6 +420,16 @@ namespace SistemaCabañas
 
         private void button8_Click(object sender, EventArgs e)
         {
+            if (dataGridView2.Rows.Count == 0)
+            {
+                MessageBox.Show
+                (
+                    "Agregue servicios"
+                );
+
+                return;
+            }
+
             FrmFactura frm = new FrmFactura();
 
             // =====================
@@ -521,7 +547,15 @@ namespace SistemaCabañas
 
         private void button14_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             FrmAlquileres frm = new FrmAlquileres();
+
+            frm.IdUsuario = this.IdUsuario;
+
+            frm.NombreUsuario = this.NombreUsuario;
+
+            frm.RolUsuario = this.RolUsuario;
 
             frm.Show();
         }
@@ -569,6 +603,11 @@ namespace SistemaCabañas
         }
 
         private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelTop_Paint(object sender, PaintEventArgs e)
         {
 
         }

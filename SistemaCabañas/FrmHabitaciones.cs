@@ -2,14 +2,14 @@
 using CapaNegocio;
 using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D;
-
 namespace SistemaCabañas
 {
     public partial class FrmHabitaciones : Form
     {
+        bool cargando = false;
         public string NombreUsuario;
         HabitacionesBL objbl = new HabitacionesBL();
 
@@ -159,6 +159,7 @@ DataGridViewCellBorderStyle.SingleHorizontal;
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             if (textBox1.Text == "")
             {
                 MessageBox.Show
@@ -233,19 +234,47 @@ DataGridViewCellBorderStyle.SingleHorizontal;
 
         private void button2_Click(object sender, EventArgs e)
         {
-            objbl.EliminarHabitacion(id);
+            if (id == 0)
+            {
+                MessageBox.Show
+                (
+                    "Seleccione habitación"
+                );
 
-            MessageBox.Show("Habitación eliminada");
+                return;
+            }
 
-            MostrarHabitaciones();
+            DialogResult r =
+            MessageBox.Show
+            (
+                "¿Eliminar habitación?",
+                "Confirmar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
-            Limpiar();
+            if (r == DialogResult.Yes)
+            {
+                objbl.EliminarHabitacion(id);
+
+                MessageBox.Show
+                (
+                    "Habitación eliminada"
+                );
+
+                MostrarHabitaciones();
+
+                Limpiar();
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             try
             {
+                cargando = true;
+
                 id = Convert.ToInt32
                 (
                     dataGridView1.CurrentRow.Cells[0].Value
@@ -254,9 +283,10 @@ DataGridViewCellBorderStyle.SingleHorizontal;
                 textBox1.Text =
                     dataGridView1.CurrentRow.Cells[1].Value.ToString();
 
-
                 comboBox2.Text =
                     dataGridView1.CurrentRow.Cells[3].Value.ToString();
+
+                cargando = false;
             }
             catch (Exception ex)
             {
@@ -407,7 +437,8 @@ DataGridViewCellBorderStyle.SingleHorizontal;
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Limpiar();
+            if (cargando)
+                return;
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -255,6 +255,44 @@ namespace SistemaCabañas
 
             e.Graphics.FillRectangle(gradiente, panelMenu.ClientRectangle);
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            DialogResult r =
+    MessageBox.Show
+    (
+        "¿Cerrar sesión?",
+        "Sistema",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Question
+    );
+
+            if (r == DialogResult.Yes)
+            {
+                this.Hide();
+
+                FrmLogin frm =
+                new FrmLogin();
+
+                frm.Show();
+            }
+        }
+
+        private void FrmMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r =
+   MessageBox.Show
+   (
+       "¿Salir del sistema?",
+       "Confirmar",
+       MessageBoxButtons.YesNo
+   );
+
+            if (r == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
 

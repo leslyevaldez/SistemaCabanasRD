@@ -278,7 +278,26 @@ new Font("Segoe UI", 10);
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            if (id == 0)
+            {
+                MessageBox.Show
+                (
+                    "Seleccione un cliente"
+                );
+
+                return;
+            }
+
+            DialogResult r =
+            MessageBox.Show
+            (
+                "¿Desea eliminar este cliente?",
+                "Confirmar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (r == DialogResult.Yes)
             {
                 objbl.EliminarCliente(id);
 
@@ -290,10 +309,6 @@ new Font("Segoe UI", 10);
                 MostrarClientes();
 
                 Limpiar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 
@@ -430,6 +445,11 @@ new Font("Segoe UI", 10);
         90F);
 
             e.Graphics.FillRectangle(gradiente, panelMenu.ClientRectangle);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

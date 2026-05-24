@@ -197,7 +197,26 @@ namespace SistemaCabañas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            if (id == 0)
+            {
+                MessageBox.Show
+                (
+                    "Seleccione servicio"
+                );
+
+                return;
+            }
+
+            DialogResult r =
+            MessageBox.Show
+            (
+                "¿Eliminar servicio?",
+                "Confirmar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (r == DialogResult.Yes)
             {
                 objbl.EliminarServicio(id);
 
@@ -208,13 +227,7 @@ namespace SistemaCabañas
 
                 MostrarServicios();
 
-                dataGridView1.ClearSelection();
-
                 Limpiar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 

@@ -119,6 +119,15 @@ namespace SistemaCabañas
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show
+                (
+                    "Seleccione opción"
+                );
+
+                return;
+            }
             if (textBox1.Text == "")
             {
                 MessageBox.Show
@@ -339,6 +348,18 @@ namespace SistemaCabañas
             FrmConfiguracion frm = new FrmConfiguracion();
 
             frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.ReadOnly = true;
+
+            dataGridView1.AllowUserToAddRows = false;
         }
     }
 }

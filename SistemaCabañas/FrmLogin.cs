@@ -90,5 +90,11 @@ tabla.Rows[0]["Id_Usuario"]);
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = true;
+            textBox2.PasswordChar = '*';
+        }
     }
 }

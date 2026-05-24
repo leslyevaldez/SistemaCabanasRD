@@ -189,7 +189,26 @@ namespace SistemaCabañas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            if (id == 0)
+            {
+                MessageBox.Show
+                (
+                    "Seleccione usuario"
+                );
+
+                return;
+            }
+
+            DialogResult r =
+            MessageBox.Show
+            (
+                "¿Eliminar usuario?",
+                "Confirmar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (r == DialogResult.Yes)
             {
                 objbl.EliminarUsuario(id);
 
@@ -201,10 +220,6 @@ namespace SistemaCabañas
                 MostrarUsuarios();
 
                 Limpiar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 

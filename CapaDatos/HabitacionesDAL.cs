@@ -14,6 +14,8 @@ namespace CapaDatos
         {
             DataTable tabla = new DataTable();
 
+            cmd.Parameters.Clear();
+
             cmd.Connection = cn.AbrirConexion();
 
             cmd.CommandText = "SP_MostrarHabitaciones";
@@ -31,6 +33,8 @@ namespace CapaDatos
 
         public void InsertarHabitacion(E_Habitaciones obj)
         {
+            cmd.Parameters.Clear();
+
             cmd.Connection = cn.AbrirConexion();
 
             cmd.CommandText = "SP_InsertarHabitacion";
@@ -38,6 +42,7 @@ namespace CapaDatos
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@Numero", obj.Numero);
+
             cmd.Parameters.AddWithValue("@Id_Tipo", obj.Id_Tipo);
 
             cmd.ExecuteNonQuery();
@@ -49,16 +54,37 @@ namespace CapaDatos
 
         public void EditarHabitacion(E_Habitaciones obj)
         {
+            cmd.Parameters.Clear();
+
             cmd.Connection = cn.AbrirConexion();
 
             cmd.CommandText = "SP_EditarHabitacion";
 
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@Id_Habitacion", obj.Id_Habitacion);
-            cmd.Parameters.AddWithValue("@Numero", obj.Numero);
-            cmd.Parameters.AddWithValue("@Estado", obj.Estado);
-            cmd.Parameters.AddWithValue("@Id_Tipo", obj.Id_Tipo);
+            cmd.Parameters.AddWithValue
+            (
+                "@Id_Habitacion",
+                obj.Id_Habitacion
+            );
+
+            cmd.Parameters.AddWithValue
+            (
+                "@Numero",
+                obj.Numero
+            );
+
+            cmd.Parameters.AddWithValue
+            (
+                "@Estado",
+                obj.Estado
+            );
+
+            cmd.Parameters.AddWithValue
+            (
+                "@Id_Tipo",
+                obj.Id_Tipo
+            );
 
             cmd.ExecuteNonQuery();
 
@@ -69,13 +95,19 @@ namespace CapaDatos
 
         public void EliminarHabitacion(int id)
         {
+            cmd.Parameters.Clear();
+
             cmd.Connection = cn.AbrirConexion();
 
             cmd.CommandText = "SP_EliminarHabitacion";
 
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@Id_Habitacion", id);
+            cmd.Parameters.AddWithValue
+            (
+                "@Id_Habitacion",
+                id
+            );
 
             cmd.ExecuteNonQuery();
 
@@ -87,6 +119,8 @@ namespace CapaDatos
         public DataTable MostrarTiposHabitaciones()
         {
             DataTable tabla = new DataTable();
+
+            cmd.Parameters.Clear();
 
             cmd.Connection = cn.AbrirConexion();
 
@@ -103,19 +137,15 @@ namespace CapaDatos
             return tabla;
         }
 
-        public void DisponibleHabitacion
-(
-    int id
-)
+        public void DisponibleHabitacion(int id)
         {
-            cmd.Connection =
-                cn.AbrirConexion();
+            cmd.Parameters.Clear();
 
-            cmd.CommandText =
-                "SP_DisponibleHabitacion";
+            cmd.Connection = cn.AbrirConexion();
 
-            cmd.CommandType =
-                CommandType.StoredProcedure;
+            cmd.CommandText = "SP_DisponibleHabitacion";
+
+            cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue
             (
@@ -129,6 +159,5 @@ namespace CapaDatos
 
             cn.CerrarConexion();
         }
-
     }
 }
