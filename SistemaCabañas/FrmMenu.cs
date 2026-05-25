@@ -142,8 +142,9 @@ namespace SistemaCabañas
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
+            panel3.Left = (this.ClientSize.Width - panel1.Width) / 2;
+            panel3.Top = (this.ClientSize.Height - panel1.Height) / 2;
 
-    
 
 
 
@@ -153,16 +154,16 @@ namespace SistemaCabañas
 
             if (RolUsuario == "Empleado")
             {
-                button4.Visible = false;
-                button5.Visible = false;
-                button11.Visible = false;
+                btnSalir.Visible = false;
+                btnReportes.Visible = false;
+                btnConfiguracion.Visible = false;
             }
 
             if (RolUsuario == "Usuario")
             {
-                button4.Visible = false;
-                button5.Visible = false;
-                button11.Visible = false;
+                btnSalir.Visible = false;
+                btnReportes.Visible = false;
+                btnConfiguracion.Visible = false;
             }
 
 
@@ -284,6 +285,90 @@ namespace SistemaCabañas
             CargarDashboard();
 
             CargarAlquileresRecientes();
+        }
+
+        private void btnDashboard_Click_1(object sender, EventArgs e)
+        {
+            FrmMenu frm = new FrmMenu();
+
+            frm.Show();
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios frm = new FrmUsuarios();
+
+            frm.Show();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            FrmClientes frm = new FrmClientes();
+
+            frm.Show();
+        }
+
+        private void btnTiposHabitaciones_Click(object sender, EventArgs e)
+        {
+            FrmTiposHabitaciones frm = new FrmTiposHabitaciones();
+
+            frm.Show();
+        }
+
+        private void btnHabitaciones_Click(object sender, EventArgs e)
+        {
+            FrmHabitaciones frm = new FrmHabitaciones();
+
+            frm.Show();
+        }
+
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            FrmServicios frm = new FrmServicios();
+
+            frm.Show();
+        }
+
+        private void btnAlquileres_Click(object sender, EventArgs e)
+        {
+            FrmAlquileres frm = new FrmAlquileres();
+
+            frm.Show();
+        }
+
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            FrmPagos frm = new FrmPagos();
+
+            frm.Show();
+
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            FrmReportes frm = new FrmReportes();
+
+            frm.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            FrmLogin frm = new  FrmLogin();
+
+            frm.Show();
+        }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            FrmConfiguracion frm = new FrmConfiguracion();
+
+            frm.Show();
+        }
+
+        private void FrmMenu_Resize(object sender, EventArgs e)
+        {
+            panel3.Left = (this.ClientSize.Width - panel1.Width) / 2;
+            panel3.Top = (this.ClientSize.Height - panel1.Height) / 2;
         }
     }
 }
