@@ -202,3 +202,7 @@ C:\PROYECTOOOOO\SistemaCabanasRD\CapaEntidades\obj\Debug\CapaEntidades.csproj.Co
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaEntidades\obj\Debug\CapaEnti.0B779BCD.Up2Date
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaEntidades\obj\Debug\CapaEntidades.dll
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaEntidades\obj\Debug\CapaEntidades.pdb
+C:\proyecto2\Sistema2\CapaEntidades\bin\Debug\x86\SqlServerSpatial170.dll
+C:\proyecto2\Sistema2\CapaEntidades\bin\Debug\x64\SqlServerSpatial170.dll
+C:\proyecto2\Sistema2\CapaEntidades\bin\Debug\arm64\SqlServerSpatial170.dll
+C:\proyecto2\Sistema2\CapaEntidades\bin\Debug\FontAwesome.Sharp.dll

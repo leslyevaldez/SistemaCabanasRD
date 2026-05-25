@@ -142,8 +142,9 @@ namespace SistemaCabañas
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-            panel3.Left = (this.ClientSize.Width - panel1.Width) / 2;
-            panel3.Top = (this.ClientSize.Height - panel1.Height) / 2;
+            panel3.Left = (this.ClientSize.Width - panel3.Width) / 2;
+
+            panel3.Top = (this.ClientSize.Height - panel3.Height) / 2;
 
 
 
@@ -154,16 +155,16 @@ namespace SistemaCabañas
 
             if (RolUsuario == "Empleado")
             {
-                btnSalir.Visible = false;
-                btnReportes.Visible = false;
-                btnConfiguracion.Visible = false;
+                btnSalir.Visible = true;
+                btnReportes.Visible = true;
+                btnConfiguracion.Visible = true;
             }
 
             if (RolUsuario == "Usuario")
             {
-                btnSalir.Visible = false;
-                btnReportes.Visible = false;
-                btnConfiguracion.Visible = false;
+                btnSalir.Visible = true;
+                btnReportes.Visible = true;
+                btnConfiguracion.Visible = true;
             }
 
 
@@ -367,8 +368,9 @@ namespace SistemaCabañas
 
         private void FrmMenu_Resize(object sender, EventArgs e)
         {
-            panel3.Left = (this.ClientSize.Width - panel1.Width) / 2;
-            panel3.Top = (this.ClientSize.Height - panel1.Height) / 2;
+            panel3.Left = (this.ClientSize.Width - panel3.Width) / 2;
+
+            panel3.Top = (this.ClientSize.Height - panel3.Height) / 2;
         }
     }
 }

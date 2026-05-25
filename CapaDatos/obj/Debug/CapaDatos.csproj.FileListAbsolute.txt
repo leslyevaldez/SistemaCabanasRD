@@ -214,3 +214,4 @@ C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompil
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\obj\Debug\CapaDatos.csproj.Up2Date
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\obj\Debug\CapaDatos.dll
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\proyecto2\Sistema2\CapaDatos\bin\Debug\FontAwesome.Sharp.dll
