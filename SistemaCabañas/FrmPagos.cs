@@ -23,6 +23,11 @@ namespace SistemaCabañas
 
         private void FrmPagos_Load(object sender, EventArgs e)
         {
+
+
+
+
+
             MostrarPagos();
 
             dataGridView1.ClearSelection();

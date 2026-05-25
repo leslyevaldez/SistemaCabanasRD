@@ -29,6 +29,8 @@ namespace SistemaCabañas
                 DataGridViewSelectionMode.FullRowSelect;
 
             dataGridView1.MultiSelect = false;
+
+
         }
 
         public void MostrarAlquileres()

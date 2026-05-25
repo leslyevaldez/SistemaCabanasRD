@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace SistemaCabañas
 {
@@ -119,7 +121,7 @@ SET MULTI_USER;
 
         private void FrmConfiguracion_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnDashboard_Click_1(object sender, EventArgs e)

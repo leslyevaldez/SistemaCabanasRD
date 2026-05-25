@@ -4,6 +4,7 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Linq;
 using System.Windows.Forms;
 
 
@@ -64,7 +65,15 @@ namespace SistemaCabañas
         }
         private void FrmAlquileres_Load(object sender, EventArgs e)
         {
-      
+            foreach (Button btn in panelMenu.Controls.OfType<Button>())
+            {
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.BackColor = Color.Black;
+                btn.ForeColor = Color.White;
+                btn.UseVisualStyleBackColor = false;
+            }
+            btnDashboard.BackColor = Color.Firebrick;
 
 
             dataGridView2.EnableHeadersVisualStyles = false;

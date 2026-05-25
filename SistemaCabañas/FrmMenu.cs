@@ -147,7 +147,7 @@ namespace SistemaCabañas
             panel3.Top = (this.ClientSize.Height - panel3.Height) / 2;
 
 
-
+            
 
 
             lblBienvenida.Text =
@@ -199,6 +199,9 @@ namespace SistemaCabañas
             lblGanancias.Text =
                 "RD$ " +
                 objbl.GananciasDia().ToString("N2");
+
+
+
         }
         private void CargarAlquileresRecientes()
         {
