@@ -23,7 +23,7 @@ namespace SistemaCabañas
 
         private void FrmPagos_Load(object sender, EventArgs e)
         {
-
+cc
 
 
 
