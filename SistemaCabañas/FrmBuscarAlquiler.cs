@@ -8,6 +8,7 @@ namespace SistemaCabañas
     {
         PagosBL objbl = new PagosBL();
 
+        public string MetodoPago { get; set; }
         public int IdAlquiler { get; set; }
 
         public decimal Total { get; set; }

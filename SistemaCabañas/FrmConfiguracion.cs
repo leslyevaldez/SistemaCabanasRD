@@ -73,42 +73,39 @@ new SqlConnection
 
                 if (open.ShowDialog() == DialogResult.OK)
                 {
-                    cn.Open();
+                    cn.Close();
+
+                    SqlConnection cn2 =
+                        new SqlConnection
+                        (
+                            "Data Source=LAPTOP-1MHMN15C;Initial Catalog=master;Integrated Security=True"
+                        );
+
+                    cn2.Open();
+
+                    string query = @"
+ALTER DATABASE SistemaCabaña
+SET SINGLE_USER
+WITH ROLLBACK IMMEDIATE;
+
+RESTORE DATABASE SistemaCabaña
+FROM DISK = '" + open.FileName + @"'
+WITH REPLACE;
+
+ALTER DATABASE SistemaCabaña
+SET MULTI_USER;
+";
 
                     SqlCommand cmd =
-                        new SqlCommand
-                        (
-                            "ALTER DATABASE SistemaCabaña SET SINGLE_USER WITH ROLLBACK IMMEDIATE",
-                            cn
-                        );
+                        new SqlCommand(query, cn2);
 
                     cmd.ExecuteNonQuery();
 
-                    SqlCommand cmd2 =
-                        new SqlCommand
-                        (
-                            "USE MASTER RESTORE DATABASE SistemaCabaña FROM DISK='" +
-                            open.FileName +
-                            "' WITH REPLACE",
-                            cn
-                        );
-
-                    cmd2.ExecuteNonQuery();
-
-                    SqlCommand cmd3 =
-                        new SqlCommand
-                        (
-                            "ALTER DATABASE SistemaCabaña SET MULTI_USER",
-                            cn
-                        );
-
-                    cmd3.ExecuteNonQuery();
-
-                    cn.Close();
+                    cn2.Close();
 
                     MessageBox.Show
                     (
-                        "Base de datos restaurada"
+                        "Base de datos restaurada correctamente"
                     );
                 }
             }
@@ -191,6 +188,11 @@ new SqlConnection
             FrmConfiguracion frm = new FrmConfiguracion();
 
             frm.Show();
+        }
+
+        private void FrmConfiguracion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -122,6 +122,7 @@ DataGridViewCellBorderStyle.SingleHorizontal;
 
             MostrarTiposHabitaciones();
 
+            dataGridView1.ClearSelection();
 
             if (RolUsuario == "Empleado")
             {

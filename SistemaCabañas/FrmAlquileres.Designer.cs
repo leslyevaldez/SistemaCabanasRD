@@ -109,7 +109,7 @@
             this.panelMenu.Controls.Add(this.button17);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(188, 640);
             this.panelMenu.TabIndex = 35;
@@ -121,7 +121,7 @@
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Location = new System.Drawing.Point(31, 25);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(150, 28);
             this.btnDashboard.TabIndex = 9;
@@ -360,7 +360,7 @@
             this.panelFormulario.Controls.Add(this.comboBox1);
             this.panelFormulario.Controls.Add(this.dateTimePicker2);
             this.panelFormulario.Location = new System.Drawing.Point(20, 149);
-            this.panelFormulario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelFormulario.Margin = new System.Windows.Forms.Padding(2);
             this.panelFormulario.Name = "panelFormulario";
             this.panelFormulario.Size = new System.Drawing.Size(375, 488);
             this.panelFormulario.TabIndex = 36;
@@ -420,8 +420,8 @@
             // comboBoxMetodoPago
             // 
             this.comboBoxMetodoPago.FormattingEnabled = true;
-            this.comboBoxMetodoPago.Location = new System.Drawing.Point(133, 342);
-            this.comboBoxMetodoPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxMetodoPago.Location = new System.Drawing.Point(147, 341);
+            this.comboBoxMetodoPago.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMetodoPago.Name = "comboBoxMetodoPago";
             this.comboBoxMetodoPago.Size = new System.Drawing.Size(92, 21);
             this.comboBoxMetodoPago.TabIndex = 33;
@@ -514,7 +514,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(122, 216);
+            this.dateTimePicker2.Location = new System.Drawing.Point(133, 209);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.ShowUpDown = true;
             this.dateTimePicker2.Size = new System.Drawing.Size(86, 20);
@@ -548,7 +548,7 @@
             this.panelServicios.Controls.Add(this.dataGridView2);
             this.panelServicios.Controls.Add(this.button4);
             this.panelServicios.Location = new System.Drawing.Point(407, 149);
-            this.panelServicios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelServicios.Margin = new System.Windows.Forms.Padding(2);
             this.panelServicios.Name = "panelServicios";
             this.panelServicios.Size = new System.Drawing.Size(450, 488);
             this.panelServicios.TabIndex = 35;
@@ -558,7 +558,7 @@
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(26, 418);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(398, 61);
             this.panel1.TabIndex = 38;
@@ -613,7 +613,7 @@
             this.panelContenido.Controls.Add(this.button5);
             this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenido.Location = new System.Drawing.Point(188, 0);
-            this.panelContenido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContenido.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenido.Name = "panelContenido";
             this.panelContenido.Size = new System.Drawing.Size(840, 640);
             this.panelContenido.TabIndex = 11;
@@ -624,7 +624,7 @@
             this.panelTop.Controls.Add(this.pictureBox1);
             this.panelTop.Controls.Add(this.label12);
             this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(2);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(841, 82);
             this.panelTop.TabIndex = 39;
@@ -634,7 +634,7 @@
             // 
             this.pictureBox1.Image = global::SistemaCabañas.Properties.Resources.usuario;
             this.pictureBox1.Location = new System.Drawing.Point(772, 38);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 28);
             this.pictureBox1.TabIndex = 14;

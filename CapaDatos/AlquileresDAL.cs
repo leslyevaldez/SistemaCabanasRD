@@ -41,7 +41,7 @@ namespace CapaDatos
             {
                 cmd.Connection = cn.AbrirConexion();
 
-                cmd.CommandText = "SP_InsertarAlquiler3";
+                cmd.CommandText = "SP_InsertarAlquiler";
 
                 cmd.CommandType = CommandType.StoredProcedure;
 

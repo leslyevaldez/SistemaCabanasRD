@@ -274,6 +274,12 @@ namespace SistemaCabañas
                     return;
                 }
 
+                if (textBox4.Text == "")
+                {
+                    MessageBox.Show("Calcule el total");
+                    return;
+                }
+
                 if
 (
     dateTimePicker3.Value
@@ -577,6 +583,9 @@ namespace SistemaCabañas
         private void button17_Click(object sender, EventArgs e)
         {
             FrmPagos frm = new FrmPagos();
+
+            frm.MetodoPago =
+            comboBoxMetodoPago.Text;
 
             frm.Show();
         }

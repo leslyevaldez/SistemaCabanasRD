@@ -49,14 +49,48 @@ namespace SistemaCabañas
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
+                string estado =
+                    dataGridView1.SelectedRows[0]
+                    .Cells["Estado"]
+                    .Value
+                    .ToString();
+
+                if
+                (
+                    estado == "Ocupada"
+                    ||
+                    estado == "Limpieza"
+                )
+                {
+                    MessageBox.Show
+                    (
+                        "No puede seleccionar esta habitación"
+                    );
+
+                    return;
+                }
+
                 IdHabitacion =
                     Convert.ToInt32
                     (
-                        dataGridView1.SelectedRows[0].Cells[0].Value
+                        dataGridView1.SelectedRows[0]
+                        .Cells[0]
+                        .Value
                     );
 
                 Habitacion =
-                    dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                    dataGridView1.SelectedRows[0]
+                    .Cells[1]
+                    .Value
+                    .ToString();
+
+                Precio =
+                    Convert.ToDecimal
+                    (
+                        dataGridView1.SelectedRows[0]
+                        .Cells["Precio"]
+                        .Value
+                    );
 
                 this.Close();
             }

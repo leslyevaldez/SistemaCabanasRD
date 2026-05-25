@@ -37,7 +37,7 @@ namespace CapaDatos
             cmd.Connection = cn.AbrirConexion();
 
             cmd.CommandText =
-                "SP_InsertarCliente2";
+                "SP_InsertarCliente";
 
             cmd.CommandType =
                 CommandType.StoredProcedure;

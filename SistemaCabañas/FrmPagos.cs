@@ -1,13 +1,6 @@
 ﻿using CapaEntidades;
 using CapaNegocio;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaCabañas
@@ -22,6 +15,7 @@ namespace SistemaCabañas
         int id = 0;
         public string NombreUsuario;
         public string RolUsuario;
+        public string MetodoPago;
         public FrmPagos()
         {
             InitializeComponent();
@@ -31,12 +25,10 @@ namespace SistemaCabañas
         {
             MostrarPagos();
 
-            comboBox1.Items.Add("Efectivo");
-            comboBox1.Items.Add("Tarjeta");
-            comboBox1.Items.Add("Transferencia");
+            dataGridView1.ClearSelection();
 
+            textBox3.Text = MetodoPago;
 
-            /*
             if (RolUsuario == "Empleado")
             {
                 button4.Visible = false;
@@ -49,7 +41,7 @@ namespace SistemaCabañas
                 button4.Visible = false;
                 button5.Visible = false;
                 button11.Visible = false;
-            }*/
+            }
 
         }
 
@@ -57,13 +49,9 @@ namespace SistemaCabañas
         {
             dataGridView1.DataSource =
                 objbl.MostrarPagos();
-        }
 
-        public void MostrarAlquileres()
-        {
-           
+            dataGridView1.ClearSelection();
         }
-
      
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -84,8 +72,6 @@ namespace SistemaCabañas
                 textBox2.Text =
                     dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
-                comboBox1.Text =
-                    dataGridView1.CurrentRow.Cells[4].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -98,7 +84,7 @@ namespace SistemaCabañas
 
             textBox2.Clear();
 
-            comboBox1.SelectedIndex = -1;
+            textBox3.Clear();
 
             id = 0;
         }
@@ -119,15 +105,7 @@ namespace SistemaCabañas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == -1)
-            {
-                MessageBox.Show
-                (
-                    "Seleccione opción"
-                );
-
-                return;
-            }
+           
             if (textBox1.Text == "")
             {
                 MessageBox.Show
@@ -164,15 +142,7 @@ namespace SistemaCabañas
                 return;
             }
 
-            if (comboBox1.Text == "")
-            {
-                MessageBox.Show
-                (
-                    "Seleccione el método de pago"
-                );
-
-                return;
-            }
+          
 
             try
             {
@@ -188,7 +158,7 @@ namespace SistemaCabañas
                 objent.Monto = monto;
 
                 objent.Metodo_Pago =
-                    comboBox1.Text;
+                    textBox3.Text;
 
                 if (id == 0)
                 {

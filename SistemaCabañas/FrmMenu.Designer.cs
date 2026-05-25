@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -67,7 +69,7 @@
             this.lblTextoDisponible = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblBienvenida = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -243,11 +245,25 @@
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(180, 609);
             this.panelMenu.TabIndex = 11;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
+            // 
+            // button12
+            // 
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(12, 569);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(150, 28);
+            this.button12.TabIndex = 11;
+            this.button12.Text = "SALIR";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // btnDashboard
             // 
@@ -255,7 +271,7 @@
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Location = new System.Drawing.Point(10, 16);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(150, 28);
             this.btnDashboard.TabIndex = 9;
@@ -271,7 +287,7 @@
             this.panelTop.Controls.Add(this.label2);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(180, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(2);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(848, 45);
             this.panelTop.TabIndex = 0;
@@ -280,7 +296,7 @@
             // 
             this.pictureBox1.Image = global::SistemaCabañas.Properties.Resources.usuario;
             this.pictureBox1.Location = new System.Drawing.Point(970, 16);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 28);
             this.pictureBox1.TabIndex = 14;
@@ -326,7 +342,7 @@
             this.panelContenido.Controls.Add(this.lblBienvenida);
             this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenido.Location = new System.Drawing.Point(180, 45);
-            this.panelContenido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContenido.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenido.Name = "panelContenido";
             this.panelContenido.Size = new System.Drawing.Size(848, 564);
             this.panelContenido.TabIndex = 11;
@@ -335,7 +351,7 @@
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(18, 654);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(56, 19);
             this.button9.TabIndex = 6;
@@ -348,7 +364,7 @@
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.lblFecha);
             this.panel2.Location = new System.Drawing.Point(800, 29);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(113, 55);
             this.panel2.TabIndex = 9;
@@ -369,7 +385,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.lblGanancias);
             this.panel1.Location = new System.Drawing.Point(74, 437);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(260, 130);
             this.panel1.TabIndex = 10;
@@ -417,7 +433,7 @@
             this.dgvAlquileres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlquileres.Location = new System.Drawing.Point(537, 437);
-            this.dgvAlquileres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvAlquileres.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAlquileres.Name = "dgvAlquileres";
             this.dgvAlquileres.ReadOnly = true;
             this.dgvAlquileres.RowHeadersVisible = false;
@@ -433,7 +449,7 @@
             this.panelAlquileres.Controls.Add(this.lblAlquileres);
             this.panelAlquileres.Controls.Add(this.label10);
             this.panelAlquileres.Location = new System.Drawing.Point(838, 203);
-            this.panelAlquileres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelAlquileres.Margin = new System.Windows.Forms.Padding(2);
             this.panelAlquileres.Name = "panelAlquileres";
             this.panelAlquileres.Size = new System.Drawing.Size(180, 130);
             this.panelAlquileres.TabIndex = 6;
@@ -470,7 +486,7 @@
             this.panelClientes.Controls.Add(this.lblClientes);
             this.panelClientes.Controls.Add(this.label6);
             this.panelClientes.Location = new System.Drawing.Point(591, 203);
-            this.panelClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelClientes.Margin = new System.Windows.Forms.Padding(2);
             this.panelClientes.Name = "panelClientes";
             this.panelClientes.Size = new System.Drawing.Size(180, 130);
             this.panelClientes.TabIndex = 6;
@@ -507,7 +523,7 @@
             this.panelOcupadas.Controls.Add(this.lblOcupadas);
             this.panelOcupadas.Controls.Add(this.label8);
             this.panelOcupadas.Location = new System.Drawing.Point(332, 203);
-            this.panelOcupadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelOcupadas.Margin = new System.Windows.Forms.Padding(2);
             this.panelOcupadas.Name = "panelOcupadas";
             this.panelOcupadas.Size = new System.Drawing.Size(180, 130);
             this.panelOcupadas.TabIndex = 6;
@@ -545,7 +561,7 @@
             this.panelDisponible.Controls.Add(this.lblDisponibles);
             this.panelDisponible.Controls.Add(this.lblTextoDisponible);
             this.panelDisponible.Location = new System.Drawing.Point(74, 203);
-            this.panelDisponible.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDisponible.Margin = new System.Windows.Forms.Padding(2);
             this.panelDisponible.Name = "panelDisponible";
             this.panelDisponible.Size = new System.Drawing.Size(193, 130);
             this.panelDisponible.TabIndex = 4;
@@ -601,19 +617,10 @@
             this.lblBienvenida.Text = "Bienvenido ";
             this.lblBienvenida.Click += new System.EventHandler(this.lblBienvenida_Click);
             // 
-            // button12
+            // timer1
             // 
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(12, 569);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(150, 28);
-            this.button12.TabIndex = 11;
-            this.button12.Text = "SALIR";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmMenu
             // 
@@ -693,5 +700,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Timer timer1;
     }
 }
