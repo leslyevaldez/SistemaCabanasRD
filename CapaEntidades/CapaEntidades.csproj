@@ -81,6 +81,7 @@
     <Compile Include="E_Reportes.cs" />
     <Compile Include="E_Roles.cs" />
     <Compile Include="E_Servicios.cs" />
+    <Compile Include="E_Sesion.cs" />
     <Compile Include="E_TiposHabitaciones.cs" />
     <Compile Include="E_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

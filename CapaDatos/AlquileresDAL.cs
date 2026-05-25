@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
+
 
 namespace CapaDatos
 {
@@ -16,22 +16,14 @@ namespace CapaDatos
         {
             DataTable tabla = new DataTable();
 
-            cmd.Connection =
-                cn.AbrirConexion();
+            cmd.Connection = cn.AbrirConexion();
+            cmd.CommandText = "SP_MostrarAlquileres";
+            cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.CommandText =
-                "SP_MostrarAlquileres";
-
-            cmd.CommandType =
-                CommandType.StoredProcedure;
-
-            SqlDataReader dr =
-                cmd.ExecuteReader();
-
+            SqlDataReader dr = cmd.ExecuteReader();
             tabla.Load(dr);
 
             cn.CerrarConexion();
-
             return tabla;
         }
 
@@ -40,37 +32,27 @@ namespace CapaDatos
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.Connection = cn.AbrirConexion();
-
                 cmd.CommandText = "SP_InsertarAlquiler";
-
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Id_Cliente", obj.Id_Cliente);
 
-                cmd.Parameters.AddWithValue("@Id_Usuario", obj.Id_Usuario);
+                // 👇 Aquí usamos el IdUsuario de la sesión
+                cmd.Parameters.AddWithValue("@Id_Usuario", Sesion.IdUsuario);
 
                 cmd.Parameters.AddWithValue("@Id_Habitacion", obj.Id_Habitacion);
-
                 cmd.Parameters.AddWithValue("@Fecha", obj.Fecha);
-
                 cmd.Parameters.AddWithValue("@Hora_Entrada", obj.Hora_Entrada);
-
                 cmd.Parameters.AddWithValue("@Hora_Salida", obj.Hora_Salida);
-
                 cmd.Parameters.AddWithValue("@Total", obj.Total);
-
                 cmd.Parameters.AddWithValue("@Estado", obj.Estado);
 
-                MessageBox.Show(obj.Id_Usuario.ToString());
-
-                int idAlquiler =
-                    Convert.ToInt32(cmd.ExecuteScalar());
-
+                int idAlquiler = Convert.ToInt32(cmd.ExecuteScalar());
                 cn.CerrarConexion();
-
                 return idAlquiler;
             }
         }
+
         public void EditarAlquiler
         (
             E_Alquileres obj

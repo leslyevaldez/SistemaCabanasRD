@@ -59,22 +59,12 @@ namespace SistemaCabañas
 
                 if (tabla.Rows.Count > 0)
                 {
-                    Sesion.Usuario =
-tabla.Rows[0]["Nombre"].ToString();
+                    Sesion.IdUsuario = Convert.ToInt32(tabla.Rows[0]["Id_Usuario"]);
+                    Sesion.Usuario = tabla.Rows[0]["Nombre"].ToString();
+                    Sesion.Rol = tabla.Rows[0]["Rol"].ToString();
+
                     FrmMenu frm = new FrmMenu();
-
-                    frm.NombreUsuario =
- tabla.Rows[0]["Nombre"].ToString();
-
-                    frm.IdUsuario =
-Convert.ToInt32(
-tabla.Rows[0]["Id_Usuario"]);
-
-                    frm.RolUsuario =
-                    tabla.Rows[0]["Rol"].ToString();
-
                     frm.Show();
-
                     this.Hide();
                 }
                 else

@@ -141,12 +141,14 @@ C:\proyecto2\Sistema2\CapaDatos\obj\Debug\CapaDatos.pdb
 C:\proyecto2\Sistema2\CapaDatos\bin\Debug\x86\SqlServerSpatial170.dll
 C:\proyecto2\Sistema2\CapaDatos\bin\Debug\x64\SqlServerSpatial170.dll
 C:\proyecto2\Sistema2\CapaDatos\bin\Debug\arm64\SqlServerSpatial170.dll
+C:\proyecto2\Sistema2\CapaDatos\bin\Debug\FontAwesome.Sharp.dll
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\bin\Debug\x86\SqlServerSpatial170.dll
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\bin\Debug\x64\SqlServerSpatial170.dll
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\bin\Debug\arm64\SqlServerSpatial170.dll
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\bin\Debug\CapaDatos.dll
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\bin\Debug\CapaDatos.pdb
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\bin\Debug\CapaEntidades.dll
+C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\bin\Debug\FontAwesome.Sharp.dll
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\bin\Debug\Microsoft.ReportViewer.Design.dll
@@ -214,4 +216,3 @@ C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompil
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\obj\Debug\CapaDatos.csproj.Up2Date
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\obj\Debug\CapaDatos.dll
 C:\PROYECTOOOOO\SistemaCabanasRD\CapaDatos\obj\Debug\CapaDatos.pdb
-C:\proyecto2\Sistema2\CapaDatos\bin\Debug\FontAwesome.Sharp.dll
