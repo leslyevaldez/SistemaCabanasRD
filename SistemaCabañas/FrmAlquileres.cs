@@ -687,7 +687,7 @@ namespace SistemaCabañas
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            FrmConfiguracion frm = new FrmConfiguracion();
+            FrmLogin frm = new FrmLogin();
 
             frm.Show();
         }
@@ -695,6 +695,13 @@ namespace SistemaCabañas
         private void iconButton1_Click(object sender, EventArgs e)
         {
             FrmRoles frm = new FrmRoles();
+
+            frm.Show();
+        }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            FrmConfiguracion frm = new FrmConfiguracion();
 
             frm.Show();
         }

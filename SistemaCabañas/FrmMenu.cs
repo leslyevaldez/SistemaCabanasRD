@@ -155,16 +155,14 @@ namespace SistemaCabañas
 
             if (RolUsuario == "Empleado")
             {
-                btnSalir.Visible = true;
-                btnReportes.Visible = true;
-                btnConfiguracion.Visible = true;
+                btnConfiguracion.Visible = false;
+                btnUsuarios.Visible = false;
             }
 
             if (RolUsuario == "Usuario")
             {
-                btnSalir.Visible = true;
-                btnReportes.Visible = true;
-                btnConfiguracion.Visible = true;
+                btnConfiguracion.Visible = false;
+                btnUsuarios.Visible = false;
             }
 
 

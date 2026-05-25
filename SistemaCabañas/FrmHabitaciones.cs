@@ -47,25 +47,7 @@ namespace SistemaCabañas
 
         private void FrmHabitaciones_Load(object sender, EventArgs e)
         {
-            EstiloBoton(button4);
-            EstiloBoton(button6);
-            EstiloBoton(button7);
-            EstiloBoton(button8);
-            EstiloBoton(button12);
-            EstiloBoton(button9);
-            EstiloBoton(button13);
-            EstiloBoton(button5);
-            EstiloBoton(button10);
-            EstiloBoton(button11);
-
-
-
-
-
-            lblUsuarioSuperior.Text =
-" " + NombreUsuario;
-            lblUsuarioSuperior.Text =
-         NombreUsuario;
+        
             foreach (Button btn in panelMenu.Controls.OfType<Button>())
             {
                 btn.FlatStyle = FlatStyle.Flat;
@@ -126,16 +108,14 @@ DataGridViewCellBorderStyle.SingleHorizontal;
 
             if (RolUsuario == "Empleado")
             {
-                button4.Visible = false;
-                button5.Visible = false;
-                button11.Visible = false;
+                btnConfiguracion.Visible = false;
+                btnUsuarios.Visible = false;
             }
 
             if (RolUsuario == "Usuario")
             {
-                button4.Visible = false;
-                button5.Visible = false;
-                button11.Visible = false;
+                btnConfiguracion.Visible = false;
+                btnUsuarios.Visible = false;
             }
 
 
@@ -481,6 +461,91 @@ DataGridViewCellBorderStyle.SingleHorizontal;
       90F);
 
             e.Graphics.FillRectangle(gradiente, panelMenu.ClientRectangle);
+        }
+
+        private void btnDashboard_Click_1(object sender, EventArgs e)
+        {
+            FrmMenu frm = new FrmMenu();
+
+            frm.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            FrmLogin frm = new FrmLogin();
+
+            frm.Show();
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios frm = new FrmUsuarios();
+
+            frm.Show();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            FrmClientes frm = new FrmClientes();
+
+            frm.Show();
+        }
+
+        private void btnTiposHabitaciones_Click(object sender, EventArgs e)
+        {
+            FrmTiposHabitaciones frm = new FrmTiposHabitaciones();
+
+            frm.Show();
+        }
+
+        private void btnHabitaciones_Click(object sender, EventArgs e)
+        {
+            FrmHabitaciones frm = new FrmHabitaciones();
+
+            frm.Show();
+        }
+
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            FrmServicios frm = new FrmServicios();
+
+            frm.Show();
+        }
+
+        private void btnAlquileres_Click(object sender, EventArgs e)
+        {
+            FrmAlquileres frm = new FrmAlquileres();
+
+            frm.Show();
+        }
+
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            FrmPagos frm = new FrmPagos();
+
+            frm.Show();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            FrmReportes frm = new FrmReportes();
+
+            frm.Show();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            FrmRoles frm = new FrmRoles();
+
+            frm.Show();
+        }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+
+            FrmConfiguracion frm = new FrmConfiguracion();
+
+            frm.Show();
         }
     }
 }

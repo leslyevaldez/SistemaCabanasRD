@@ -38,27 +38,26 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.btnConfiguracion = new FontAwesome.Sharp.IconButton();
+            this.btnReportes = new FontAwesome.Sharp.IconButton();
+            this.btnPagos = new FontAwesome.Sharp.IconButton();
+            this.btnAlquileres = new FontAwesome.Sharp.IconButton();
+            this.btnServicios = new FontAwesome.Sharp.IconButton();
+            this.btnHabitaciones = new FontAwesome.Sharp.IconButton();
+            this.btnTiposHabitaciones = new FontAwesome.Sharp.IconButton();
+            this.btnClientes = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnDashboard = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelMenu.SuspendLayout();
             this.panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -86,7 +85,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(287, 319);
+            this.label3.Location = new System.Drawing.Point(440, 494);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 16);
@@ -115,7 +114,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(356, 316);
+            this.textBox3.Location = new System.Drawing.Point(519, 494);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(313, 22);
@@ -125,7 +124,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(280, 360);
+            this.dataGridView1.Location = new System.Drawing.Point(401, 528);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -178,222 +177,23 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panelMenu.Controls.Add(this.btnDashboard);
-            this.panelMenu.Controls.Add(this.button11);
-            this.panelMenu.Controls.Add(this.button10);
-            this.panelMenu.Controls.Add(this.button5);
-            this.panelMenu.Controls.Add(this.button4);
-            this.panelMenu.Controls.Add(this.button6);
-            this.panelMenu.Controls.Add(this.button7);
-            this.panelMenu.Controls.Add(this.button8);
-            this.panelMenu.Controls.Add(this.button9);
-            this.panelMenu.Controls.Add(this.button12);
-            this.panelMenu.Controls.Add(this.button13);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(240, 588);
-            this.panelMenu.TabIndex = 21;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.BackColor = System.Drawing.Color.Firebrick;
-            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Location = new System.Drawing.Point(13, 20);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(200, 35);
-            this.btnDashboard.TabIndex = 9;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
-            // button11
-            // 
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(13, 544);
-            this.button11.Margin = new System.Windows.Forms.Padding(4);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(200, 35);
-            this.button11.TabIndex = 10;
-            this.button11.Text = "configuracion";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button10
-            // 
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(13, 494);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(200, 35);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "Reportes";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button5
-            // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(13, 430);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 35);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Usuarios";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(13, 68);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 35);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Habitaciones";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button6
-            // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(13, 124);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 35);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Tipos Habitaciones";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(13, 179);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(200, 35);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Clientes";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(13, 232);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(200, 35);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Alquileres";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(13, 331);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(200, 35);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Roles";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(13, 275);
-            this.button12.Margin = new System.Windows.Forms.Padding(4);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(200, 35);
-            this.button12.TabIndex = 2;
-            this.button12.Text = "Servicios";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // button13
-            // 
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(13, 374);
-            this.button13.Margin = new System.Windows.Forms.Padding(4);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(200, 35);
-            this.button13.TabIndex = 1;
-            this.button13.Text = "pagos";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelTop.Controls.Add(this.pictureBox1);
+            this.panelTop.BackColor = System.Drawing.Color.Firebrick;
             this.panelTop.Controls.Add(this.label5);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(240, 0);
+            this.panelTop.Location = new System.Drawing.Point(231, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(827, 55);
+            this.panelTop.Size = new System.Drawing.Size(1122, 140);
             this.panelTop.TabIndex = 22;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaCabañas.Properties.Resources.usuario;
-            this.pictureBox1.Location = new System.Drawing.Point(739, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 35);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 20);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Location = new System.Drawing.Point(44, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 30);
+            this.label5.Size = new System.Drawing.Size(208, 50);
             this.label5.TabIndex = 0;
             this.label5.Text = "SERVICIOS";
             // 
@@ -407,19 +207,303 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Location = new System.Drawing.Point(290, 124);
+            this.panel1.Location = new System.Drawing.Point(401, 264);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(720, 170);
             this.panel1.TabIndex = 23;
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.Black;
+            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Controls.Add(this.btnSalir);
+            this.panelMenu.Controls.Add(this.btnConfiguracion);
+            this.panelMenu.Controls.Add(this.btnReportes);
+            this.panelMenu.Controls.Add(this.btnPagos);
+            this.panelMenu.Controls.Add(this.btnAlquileres);
+            this.panelMenu.Controls.Add(this.btnServicios);
+            this.panelMenu.Controls.Add(this.btnHabitaciones);
+            this.panelMenu.Controls.Add(this.btnTiposHabitaciones);
+            this.panelMenu.Controls.Add(this.btnClientes);
+            this.panelMenu.Controls.Add(this.iconButton2);
+            this.panelMenu.Controls.Add(this.btnDashboard);
+            this.panelMenu.Location = new System.Drawing.Point(3, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(222, 913);
+            this.panelMenu.TabIndex = 45;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 24;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 578);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(222, 58);
+            this.iconButton1.TabIndex = 11;
+            this.iconButton1.Text = "Roles";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.btnSalir.IconColor = System.Drawing.Color.White;
+            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalir.IconSize = 24;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(0, 783);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(222, 65);
+            this.btnSalir.TabIndex = 10;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnConfiguracion
+            // 
+            this.btnConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfiguracion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguracion.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracion.ForeColor = System.Drawing.Color.White;
+            this.btnConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Gears;
+            this.btnConfiguracion.IconColor = System.Drawing.Color.White;
+            this.btnConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConfiguracion.IconSize = 24;
+            this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguracion.Location = new System.Drawing.Point(0, 848);
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            this.btnConfiguracion.Size = new System.Drawing.Size(222, 65);
+            this.btnConfiguracion.TabIndex = 9;
+            this.btnConfiguracion.Text = "Configuracion";
+            this.btnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConfiguracion.UseVisualStyleBackColor = true;
+            this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.btnReportes.IconColor = System.Drawing.Color.White;
+            this.btnReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReportes.IconSize = 24;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(0, 520);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(222, 58);
+            this.btnReportes.TabIndex = 8;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+            // 
+            // btnPagos
+            // 
+            this.btnPagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPagos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagos.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagos.ForeColor = System.Drawing.Color.White;
+            this.btnPagos.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
+            this.btnPagos.IconColor = System.Drawing.Color.White;
+            this.btnPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPagos.IconSize = 24;
+            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.Location = new System.Drawing.Point(0, 455);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Size = new System.Drawing.Size(222, 65);
+            this.btnPagos.TabIndex = 7;
+            this.btnPagos.Text = "Pagos";
+            this.btnPagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPagos.UseVisualStyleBackColor = true;
+            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
+            // 
+            // btnAlquileres
+            // 
+            this.btnAlquileres.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlquileres.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlquileres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlquileres.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlquileres.ForeColor = System.Drawing.Color.White;
+            this.btnAlquileres.IconChar = FontAwesome.Sharp.IconChar.Key;
+            this.btnAlquileres.IconColor = System.Drawing.Color.White;
+            this.btnAlquileres.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAlquileres.IconSize = 24;
+            this.btnAlquileres.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlquileres.Location = new System.Drawing.Point(0, 390);
+            this.btnAlquileres.Name = "btnAlquileres";
+            this.btnAlquileres.Size = new System.Drawing.Size(222, 65);
+            this.btnAlquileres.TabIndex = 6;
+            this.btnAlquileres.Text = "Alquileres";
+            this.btnAlquileres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlquileres.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlquileres.UseVisualStyleBackColor = true;
+            this.btnAlquileres.Click += new System.EventHandler(this.btnAlquileres_Click);
+            // 
+            // btnServicios
+            // 
+            this.btnServicios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnServicios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServicios.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServicios.ForeColor = System.Drawing.Color.White;
+            this.btnServicios.IconChar = FontAwesome.Sharp.IconChar.Tooth;
+            this.btnServicios.IconColor = System.Drawing.Color.White;
+            this.btnServicios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnServicios.IconSize = 24;
+            this.btnServicios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnServicios.Location = new System.Drawing.Point(0, 325);
+            this.btnServicios.Name = "btnServicios";
+            this.btnServicios.Size = new System.Drawing.Size(222, 65);
+            this.btnServicios.TabIndex = 5;
+            this.btnServicios.Text = "Servicios";
+            this.btnServicios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnServicios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnServicios.UseVisualStyleBackColor = true;
+            this.btnServicios.Click += new System.EventHandler(this.btnServicios_Click);
+            // 
+            // btnHabitaciones
+            // 
+            this.btnHabitaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHabitaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHabitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHabitaciones.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHabitaciones.ForeColor = System.Drawing.Color.White;
+            this.btnHabitaciones.IconChar = FontAwesome.Sharp.IconChar.Hotel;
+            this.btnHabitaciones.IconColor = System.Drawing.Color.White;
+            this.btnHabitaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHabitaciones.IconSize = 24;
+            this.btnHabitaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHabitaciones.Location = new System.Drawing.Point(0, 260);
+            this.btnHabitaciones.Name = "btnHabitaciones";
+            this.btnHabitaciones.Size = new System.Drawing.Size(222, 65);
+            this.btnHabitaciones.TabIndex = 4;
+            this.btnHabitaciones.Text = "Habitaciones";
+            this.btnHabitaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHabitaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHabitaciones.UseVisualStyleBackColor = true;
+            this.btnHabitaciones.Click += new System.EventHandler(this.btnHabitaciones_Click);
+            // 
+            // btnTiposHabitaciones
+            // 
+            this.btnTiposHabitaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTiposHabitaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTiposHabitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTiposHabitaciones.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTiposHabitaciones.ForeColor = System.Drawing.Color.White;
+            this.btnTiposHabitaciones.IconChar = FontAwesome.Sharp.IconChar.Bed;
+            this.btnTiposHabitaciones.IconColor = System.Drawing.Color.White;
+            this.btnTiposHabitaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTiposHabitaciones.IconSize = 24;
+            this.btnTiposHabitaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTiposHabitaciones.Location = new System.Drawing.Point(0, 195);
+            this.btnTiposHabitaciones.Name = "btnTiposHabitaciones";
+            this.btnTiposHabitaciones.Size = new System.Drawing.Size(222, 65);
+            this.btnTiposHabitaciones.TabIndex = 3;
+            this.btnTiposHabitaciones.Text = "Tipos Habitaciones";
+            this.btnTiposHabitaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTiposHabitaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTiposHabitaciones.UseVisualStyleBackColor = true;
+            this.btnTiposHabitaciones.Click += new System.EventHandler(this.btnTiposHabitaciones_Click);
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.IconChar = FontAwesome.Sharp.IconChar.UserLock;
+            this.btnClientes.IconColor = System.Drawing.Color.White;
+            this.btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClientes.IconSize = 24;
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(0, 130);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(222, 65);
+            this.btnClientes.TabIndex = 2;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 24;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(0, 65);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(222, 65);
+            this.iconButton2.TabIndex = 1;
+            this.iconButton2.Text = "Usuarios";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.HouseLock;
+            this.btnDashboard.IconColor = System.Drawing.Color.White;
+            this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDashboard.IconSize = 24;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 0);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(222, 65);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click_1);
             // 
             // FrmServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 588);
+            this.ClientSize = new System.Drawing.Size(1353, 901);
+            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
@@ -429,12 +513,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmServicios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panelMenu.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,21 +535,21 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelMenu;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnSalir;
+        private FontAwesome.Sharp.IconButton btnConfiguracion;
+        private FontAwesome.Sharp.IconButton btnReportes;
+        private FontAwesome.Sharp.IconButton btnPagos;
+        private FontAwesome.Sharp.IconButton btnAlquileres;
+        private FontAwesome.Sharp.IconButton btnServicios;
+        private FontAwesome.Sharp.IconButton btnHabitaciones;
+        private FontAwesome.Sharp.IconButton btnTiposHabitaciones;
+        private FontAwesome.Sharp.IconButton btnClientes;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnDashboard;
     }
 }

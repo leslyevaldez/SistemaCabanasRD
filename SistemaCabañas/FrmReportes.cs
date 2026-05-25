@@ -254,5 +254,99 @@ ORDER BY Fecha", cn);
         {
 
         }
+
+        private void panelTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDashboard_Click_1(object sender, EventArgs e)
+        {
+            FrmMenu frm = new FrmMenu();
+
+            frm.Show();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios frm = new FrmUsuarios();
+
+            frm.Show();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            FrmClientes frm = new FrmClientes();
+
+            frm.Show();
+        }
+
+        private void btnTiposHabitaciones_Click(object sender, EventArgs e)
+        {
+            FrmTiposHabitaciones frm = new FrmTiposHabitaciones();
+
+            frm.Show();
+        }
+
+        private void btnHabitaciones_Click(object sender, EventArgs e)
+        {
+            FrmHabitaciones frm = new FrmHabitaciones();
+
+            frm.Show();
+        }
+
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            FrmServicios frm = new FrmServicios();
+
+            frm.Show();
+        }
+
+        private void btnAlquileres_Click(object sender, EventArgs e)
+        {
+            FrmAlquileres frm = new FrmAlquileres();
+
+            frm.Show();
+        }
+
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            FrmPagos frm = new FrmPagos();
+
+            frm.Show();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            FrmReportes frm = new FrmReportes();
+
+            frm.Show();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            FrmRoles frm = new FrmRoles();
+
+            frm.Show();
+        }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            FrmConfiguracion frm = new FrmConfiguracion();
+
+            frm.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            FrmLogin frm = new FrmLogin();
+
+            frm.Show();
+        }
     }
 }
