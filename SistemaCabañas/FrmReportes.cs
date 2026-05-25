@@ -23,6 +23,9 @@ namespace SistemaCabañas
         {
 
             this.reportViewer1.RefreshReport();
+            panel1.Left = (this.ClientSize.Width - panel1.Width) / 2;
+            panel1.Top = (this.ClientSize.Height - panel1.Height) / 2;
+
         }
 
         private void btnClientefrecuente_Click(object sender, EventArgs e)
@@ -239,6 +242,12 @@ ORDER BY Fecha", cn);
             reportViewer1.LocalReport.DataSources.Add(rds);
 
             reportViewer1.RefreshReport();
+        }
+
+        private void FrmReportes_Resize(object sender, EventArgs e)
+        {
+            panel1.Left = (this.ClientSize.Width - panel1.Width) / 2;
+            panel1.Top = (this.ClientSize.Height - panel1.Height) / 2;
         }
     }
 }

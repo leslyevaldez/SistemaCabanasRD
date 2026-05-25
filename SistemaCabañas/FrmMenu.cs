@@ -143,16 +143,7 @@ namespace SistemaCabañas
         private void FrmMenu_Load(object sender, EventArgs e)
         {
 
-            EstiloBoton(button1);
-            EstiloBoton(button6);
-            EstiloBoton(button7);
-            EstiloBoton(button8);
-            EstiloBoton(button3);
-            EstiloBoton(button4);
-            EstiloBoton(button2);
-            EstiloBoton(button5);
-            EstiloBoton(button10);
-            EstiloBoton(button11);
+    
 
 
 
@@ -247,13 +238,7 @@ namespace SistemaCabañas
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
-            LinearGradientBrush gradiente = new LinearGradientBrush(
-      panelMenu.ClientRectangle,
-      Color.FromArgb(15, 15, 15),
-      Color.FromArgb(45, 45, 45),
-      90F);
-
-            e.Graphics.FillRectangle(gradiente, panelMenu.ClientRectangle);
+      
         }
 
         private void button12_Click(object sender, EventArgs e)

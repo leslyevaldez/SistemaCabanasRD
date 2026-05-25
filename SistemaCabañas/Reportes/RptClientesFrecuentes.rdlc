@@ -6,18 +6,18 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.09267cm</Width>
+              <Width>4.405cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.09267cm</Width>
+              <Width>4.405cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.09267cm</Width>
+              <Width>4.405cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.0445cm</Height>
+              <Height>1.997cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -120,7 +120,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.0445cm</Height>
+              <Height>1.997cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -238,29 +238,16 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>5.30437cm</Top>
-        <Left>1.00753cm</Left>
-        <Height>2.089cm</Height>
-        <Width>9.278cm</Width>
+        <Top>6.38387cm</Top>
+        <Left>3.56636cm</Left>
+        <Height>3.994cm</Height>
+        <Width>13.21501cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Rectangle Name="Rectangle2">
-        <KeepTogether>true</KeepTogether>
-        <Top>10.6807cm</Top>
-        <Height>2.5cm</Height>
-        <Width>16.51cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <BackgroundColor>Maroon</BackgroundColor>
-        </Style>
-      </Rectangle>
       <Textbox Name="Textbox7">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -281,10 +268,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
         <Top>4.22487cm</Top>
-        <Left>1.00753cm</Left>
+        <Left>3.56636cm</Left>
         <Height>0.727cm</Height>
         <Width>9.89184cm</Width>
-        <ZIndex>2</ZIndex>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -320,7 +307,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Left>4.6717cm</Left>
+                <Top>0.11853cm</Top>
+                <Left>7.99487cm</Left>
                 <Height>0.79397cm</Height>
                 <Width>8.7865cm</Width>
                 <Style>
@@ -335,9 +323,9 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>2.53528cm</Top>
+            <Top>2.60583cm</Top>
             <Height>0.9125cm</Height>
-            <Width>16.51cm</Width>
+            <Width>24cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -349,8 +337,8 @@
             <Source>Embedded</Source>
             <Value>LOGOCABAÑA</Value>
             <Sizing>FitProportional</Sizing>
-            <Height>2.46472cm</Height>
-            <Width>6.1355cm</Width>
+            <Height>3.51833cm</Height>
+            <Width>6.2625cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -360,8 +348,22 @@
           </Image>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Height>3.44778cm</Height>
-        <Width>16.51cm</Width>
+        <Height>3.51833cm</Height>
+        <Width>24cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>Maroon</BackgroundColor>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle2">
+        <KeepTogether>true</KeepTogether>
+        <Top>12.48167cm</Top>
+        <Left>0cm</Left>
+        <Height>3.51833cm</Height>
+        <Width>24cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -371,13 +373,13 @@
         </Style>
       </Rectangle>
     </ReportItems>
-    <Height>5.18925in</Height>
+    <Height>16cm</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>24cm</Width>
   <Page>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
+    <PageHeight>20cm</PageHeight>
+    <PageWidth>27cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
     <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>

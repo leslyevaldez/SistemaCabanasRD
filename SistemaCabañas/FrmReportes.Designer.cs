@@ -50,9 +50,11 @@
             this.dtDesde = new System.Windows.Forms.DateTimePicker();
             this.dtHasta = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClientefrecuente
@@ -61,7 +63,7 @@
             this.btnClientefrecuente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientefrecuente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientefrecuente.ForeColor = System.Drawing.Color.White;
-            this.btnClientefrecuente.Location = new System.Drawing.Point(300, 110);
+            this.btnClientefrecuente.Location = new System.Drawing.Point(310, 320);
             this.btnClientefrecuente.Name = "btnClientefrecuente";
             this.btnClientefrecuente.Size = new System.Drawing.Size(156, 60);
             this.btnClientefrecuente.TabIndex = 0;
@@ -75,7 +77,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(300, 288);
+            this.button2.Location = new System.Drawing.Point(310, 140);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 60);
             this.button2.TabIndex = 1;
@@ -89,7 +91,7 @@
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Location = new System.Drawing.Point(300, 194);
+            this.btnUsuarios.Location = new System.Drawing.Point(310, 223);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(156, 60);
             this.btnUsuarios.TabIndex = 2;
@@ -99,10 +101,13 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(490, 126);
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportViewer1.Location = new System.Drawing.Point(487, 113);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(781, 453);
+            this.reportViewer1.Size = new System.Drawing.Size(710, 505);
             this.reportViewer1.TabIndex = 3;
             // 
             // panelMenu
@@ -120,9 +125,9 @@
             this.panelMenu.Controls.Add(this.button13);
             this.panelMenu.Controls.Add(this.button14);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Location = new System.Drawing.Point(0, 55);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(240, 676);
+            this.panelMenu.Size = new System.Drawing.Size(250, 795);
             this.panelMenu.TabIndex = 23;
             // 
             // btnDashboard
@@ -299,9 +304,9 @@
             this.panelTop.Controls.Add(this.pictureBox1);
             this.panelTop.Controls.Add(this.label5);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(240, 0);
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1063, 55);
+            this.panelTop.Size = new System.Drawing.Size(1500, 55);
             this.panelTop.TabIndex = 24;
             // 
             // pictureBox1
@@ -325,14 +330,14 @@
             // 
             // dtDesde
             // 
-            this.dtDesde.Location = new System.Drawing.Point(284, 479);
+            this.dtDesde.Location = new System.Drawing.Point(281, 483);
             this.dtDesde.Name = "dtDesde";
             this.dtDesde.Size = new System.Drawing.Size(200, 22);
             this.dtDesde.TabIndex = 25;
             // 
             // dtHasta
             // 
-            this.dtHasta.Location = new System.Drawing.Point(284, 507);
+            this.dtHasta.Location = new System.Drawing.Point(281, 522);
             this.dtHasta.Name = "dtHasta";
             this.dtHasta.Size = new System.Drawing.Size(200, 22);
             this.dtHasta.TabIndex = 26;
@@ -343,7 +348,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(300, 362);
+            this.button1.Location = new System.Drawing.Point(310, 408);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 60);
             this.button1.TabIndex = 27;
@@ -351,29 +356,39 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panelMenu);
+            this.panel1.Controls.Add(this.reportViewer1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnUsuarios);
+            this.panel1.Controls.Add(this.dtHasta);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnClientefrecuente);
+            this.panel1.Controls.Add(this.dtDesde);
+            this.panel1.Controls.Add(this.panelTop);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1500, 850);
+            this.panel1.TabIndex = 28;
+            // 
             // FrmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1303, 676);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dtHasta);
-            this.Controls.Add(this.dtDesde);
-            this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.panelMenu);
-            this.Controls.Add(this.reportViewer1);
-            this.Controls.Add(this.btnUsuarios);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnClientefrecuente);
+            this.ClientSize = new System.Drawing.Size(1525, 1055);
+            this.Controls.Add(this.panel1);
             this.Name = "FrmReportes";
             this.Text = "FrmReportes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReportes_Load);
+            this.Resize += new System.EventHandler(this.FrmReportes_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -402,5 +417,6 @@
         private System.Windows.Forms.DateTimePicker dtDesde;
         private System.Windows.Forms.DateTimePicker dtHasta;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
