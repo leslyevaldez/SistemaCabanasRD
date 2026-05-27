@@ -25,9 +25,11 @@ namespace SistemaCabañas
         private void FrmFactura_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+
+
             reportViewer1.LocalReport.ReportPath =
-    Application.StartupPath +
-    @"\Reportes\FacturaAlquiler.rdlc";
+            Application.StartupPath +
+            @"\Reportes\FacturaAlquiler.rdlc";
 
             reportViewer1.LocalReport.DataSources.Clear();
 

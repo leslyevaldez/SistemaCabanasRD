@@ -980,7 +980,7 @@ namespace SistemaCabañas {
             
             private global::System.Data.DataColumn columnCliente;
             
-            private global::System.Data.DataColumn columnHabitacion;
+            private global::System.Data.DataColumn columnNumero_Habitacion;
             
             private global::System.Data.DataColumn columnFecha;
             
@@ -1051,9 +1051,9 @@ namespace SistemaCabañas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn HabitacionColumn {
+            public global::System.Data.DataColumn Numero_HabitacionColumn {
                 get {
-                    return this.columnHabitacion;
+                    return this.columnNumero_Habitacion;
                 }
             }
             
@@ -1166,12 +1166,12 @@ namespace SistemaCabañas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CabeceraFacturaRow AddCabeceraFacturaRow(string FacturaNo, string Cliente, string Habitacion, string Fecha, string HoraEntrada, string HoraSalida, string Estado, string Empleado, string MetodoPago, string Total, string Cedula, string Telefono) {
+            public CabeceraFacturaRow AddCabeceraFacturaRow(string FacturaNo, string Cliente, string Numero_Habitacion, string Fecha, string HoraEntrada, string HoraSalida, string Estado, string Empleado, string MetodoPago, string Total, string Cedula, string Telefono) {
                 CabeceraFacturaRow rowCabeceraFacturaRow = ((CabeceraFacturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FacturaNo,
                         Cliente,
-                        Habitacion,
+                        Numero_Habitacion,
                         Fecha,
                         HoraEntrada,
                         HoraSalida,
@@ -1205,7 +1205,7 @@ namespace SistemaCabañas {
             internal void InitVars() {
                 this.columnFacturaNo = base.Columns["FacturaNo"];
                 this.columnCliente = base.Columns["Cliente"];
-                this.columnHabitacion = base.Columns["Habitacion"];
+                this.columnNumero_Habitacion = base.Columns["Numero_Habitacion"];
                 this.columnFecha = base.Columns["Fecha"];
                 this.columnHoraEntrada = base.Columns["HoraEntrada"];
                 this.columnHoraSalida = base.Columns["HoraSalida"];
@@ -1224,8 +1224,8 @@ namespace SistemaCabañas {
                 base.Columns.Add(this.columnFacturaNo);
                 this.columnCliente = new global::System.Data.DataColumn("Cliente", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCliente);
-                this.columnHabitacion = new global::System.Data.DataColumn("Habitacion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHabitacion);
+                this.columnNumero_Habitacion = new global::System.Data.DataColumn("Numero_Habitacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero_Habitacion);
                 this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha);
                 this.columnHoraEntrada = new global::System.Data.DataColumn("HoraEntrada", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2373,17 +2373,18 @@ namespace SistemaCabañas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Habitacion {
+            public string Numero_Habitacion {
                 get {
                     try {
-                        return ((string)(this[this.tableCabeceraFactura.HabitacionColumn]));
+                        return ((string)(this[this.tableCabeceraFactura.Numero_HabitacionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Habitacion\' de la tabla \'CabeceraFactura\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Numero_Habitacion\' de la tabla \'CabeceraFactura\' es DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tableCabeceraFactura.HabitacionColumn] = value;
+                    this[this.tableCabeceraFactura.Numero_HabitacionColumn] = value;
                 }
             }
             
@@ -2557,14 +2558,14 @@ namespace SistemaCabañas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsHabitacionNull() {
-                return this.IsNull(this.tableCabeceraFactura.HabitacionColumn);
+            public bool IsNumero_HabitacionNull() {
+                return this.IsNull(this.tableCabeceraFactura.Numero_HabitacionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetHabitacionNull() {
-                this[this.tableCabeceraFactura.HabitacionColumn] = global::System.Convert.DBNull;
+            public void SetNumero_HabitacionNull() {
+                this[this.tableCabeceraFactura.Numero_HabitacionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

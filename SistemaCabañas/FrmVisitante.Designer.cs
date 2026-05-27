@@ -110,6 +110,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "FrmVisitante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmVisitante";
             this.Load += new System.EventHandler(this.FrmVisitante_Load);
             this.panel1.ResumeLayout(false);

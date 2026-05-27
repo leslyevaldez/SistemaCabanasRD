@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 namespace SistemaCabañas
 {
     public partial class FrmMenu : Form
@@ -143,9 +144,7 @@ namespace SistemaCabañas
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-            panel3.Left = (this.ClientSize.Width - panel3.Width) / 2;
-
-            panel3.Top = (this.ClientSize.Height - panel3.Height) / 2;
+          
 
 
             
@@ -379,12 +378,7 @@ namespace SistemaCabañas
             frm.Show();
         }
 
-        private void FrmMenu_Resize(object sender, EventArgs e)
-        {
-            panel3.Left = (this.ClientSize.Width - panel3.Width) / 2;
-
-            panel3.Top = (this.ClientSize.Height - panel3.Height) / 2;
-        }
+      
     }
 }
 

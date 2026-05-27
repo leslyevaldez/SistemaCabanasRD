@@ -106,7 +106,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(580, 237);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(563, 556);
+            this.reportViewer1.Size = new System.Drawing.Size(600, 300);
             this.reportViewer1.TabIndex = 3;
             // 
             // panelTop
@@ -468,6 +468,7 @@
             this.ClientSize = new System.Drawing.Size(1353, 901);
             this.Controls.Add(this.panel1);
             this.Name = "FrmReportes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmReportes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReportes_Load);

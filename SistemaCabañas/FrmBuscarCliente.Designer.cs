@@ -135,7 +135,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmBuscarCliente";
             this.Text = "FrmBuscarCliente";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmBuscarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelTop.ResumeLayout(false);

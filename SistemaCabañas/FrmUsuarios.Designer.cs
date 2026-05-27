@@ -561,6 +561,7 @@
             this.Controls.Add(this.label5);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmUsuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);

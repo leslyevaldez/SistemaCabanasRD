@@ -385,8 +385,8 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
-            <Top>6.04775cm</Top>
-            <Left>3.6322cm</Left>
+            <Top>6.32292cm</Top>
+            <Left>8.1172cm</Left>
             <Height>6.37583cm</Height>
             <Width>9.23567cm</Width>
             <Style>
@@ -402,46 +402,22 @@
             <ReportItems>
               <Rectangle Name="Rectangle3">
                 <ReportItems>
-                  <Textbox Name="Textbox2">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value>Servicios Mas Consumidos</Value>
-                            <Style>
-                              <FontFamily>Segoe UI</FontFamily>
-                              <FontSize>14pt</FontSize>
-                              <FontWeight>Bold</FontWeight>
-                              <TextDecoration>Underline</TextDecoration>
-                              <Color>White</Color>
-                            </Style>
-                          </TextRun>
-                        </TextRuns>
-                        <Style />
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox2</rd:DefaultName>
-                    <Top>0.79375cm</Top>
-                    <Left>4.6717cm</Left>
-                    <Height>0.79397cm</Height>
-                    <Width>8.7865cm</Width>
+                  <Image Name="Image2">
+                    <Source>Embedded</Source>
+                    <Value>LOGOCABAÑA</Value>
+                    <Sizing>FitProportional</Sizing>
+                    <Height>2.90803cm</Height>
+                    <Width>6.87633cm</Width>
                     <Style>
                       <Border>
                         <Style>None</Style>
                       </Border>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
                     </Style>
-                  </Textbox>
+                  </Image>
                 </ReportItems>
                 <KeepTogether>true</KeepTogether>
-                <Top>1.74153cm</Top>
-                <Height>2.5cm</Height>
-                <Width>16.94604cm</Width>
+                <Height>2.90803cm</Height>
+                <Width>24cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -449,23 +425,46 @@
                   <BackgroundColor>Silver</BackgroundColor>
                 </Style>
               </Rectangle>
-              <Image Name="Image2">
-                <Source>Embedded</Source>
-                <Value>LOGOCABAÑA</Value>
-                <Sizing>FitProportional</Sizing>
-                <Height>2.46472cm</Height>
-                <Width>4.675cm</Width>
+              <Textbox Name="Textbox2">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Servicios Mas Consumidos</Value>
+                        <Style>
+                          <FontFamily>Segoe UI</FontFamily>
+                          <FontSize>14pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <TextDecoration>Underline</TextDecoration>
+                          <Color>White</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox2</rd:DefaultName>
+                <Top>3.25495cm</Top>
+                <Left>8.56637cm</Left>
+                <Height>0.79397cm</Height>
+                <Width>8.7865cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
                 </Style>
-              </Image>
+              </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Height>4.24153cm</Height>
-            <Width>16.94604cm</Width>
+            <Height>4.5167cm</Height>
+            <Width>24cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -476,9 +475,9 @@
           </Rectangle>
           <Rectangle Name="Rectangle2">
             <KeepTogether>true</KeepTogether>
-            <Top>13.30109cm</Top>
+            <Top>13.57626cm</Top>
             <Height>2.5cm</Height>
-            <Width>16.94604cm</Width>
+            <Width>24cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -506,8 +505,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>4.91238cm</Top>
-            <Left>3.5271cm</Left>
+            <Top>4.82771cm</Top>
+            <Left>8.1172cm</Left>
             <Height>0.727cm</Height>
             <Width>9.89184cm</Width>
             <ZIndex>3</ZIndex>
@@ -522,10 +521,10 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>6.2209in</Height>
+        <Height>6.32923in</Height>
         <Style />
       </Body>
-      <Width>6.67167in</Width>
+      <Width>24cm</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

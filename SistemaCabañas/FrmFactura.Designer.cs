@@ -37,16 +37,17 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1332, 950);
+            this.reportViewer1.Size = new System.Drawing.Size(914, 1036);
             this.reportViewer1.TabIndex = 0;
             // 
             // FrmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1332, 950);
+            this.ClientSize = new System.Drawing.Size(914, 1036);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FrmFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFactura";
             this.Load += new System.EventHandler(this.FrmFactura_Load);
             this.ResumeLayout(false);
