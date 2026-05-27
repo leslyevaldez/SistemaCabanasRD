@@ -54,16 +54,19 @@ namespace SistemaCabañas
         private void button2_Click(object sender, EventArgs e)
         {
             IdAlquiler =
-Convert.ToInt32
-(
-    dataGridView1.CurrentRow.Cells[0].Value
-);
+    Convert.ToInt32
+    (
+        dataGridView1.CurrentRow.Cells[0].Value
+    );
 
             Total =
             Convert.ToDecimal
             (
                 dataGridView1.CurrentRow.Cells["Total"].Value
             );
+
+            MetodoPago =
+            dataGridView1.CurrentRow.Cells["Metodo_Pago"].Value.ToString();
 
             this.Close();
         }
@@ -85,16 +88,19 @@ Convert.ToInt32
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             IdAlquiler =
-    Convert.ToInt32
-    (
-        dataGridView1.CurrentRow.Cells[0].Value
-    );
+     Convert.ToInt32
+     (
+         dataGridView1.CurrentRow.Cells[0].Value
+     );
 
             Total =
-            Convert.ToDecimal
-            (
-                dataGridView1.CurrentRow.Cells["Total"].Value
-            );
+ Convert.ToDecimal
+ (
+     dataGridView1.CurrentRow.Cells["Total"].Value
+ );
+
+            MetodoPago =
+            dataGridView1.CurrentRow.Cells["Metodo_Pago"].Value.ToString();
 
             this.Close();
         }

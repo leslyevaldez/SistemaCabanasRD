@@ -126,13 +126,23 @@ namespace SistemaCabañas
         {
             try
             {
-                objbl.EliminarRol(id);
+                DialogResult r = MessageBox.Show
+(
+    "¿Deseas eliminar este registro?",
+    "Eliminar",
+    MessageBoxButtons.YesNo,
+    MessageBoxIcon.Question
+);
 
-                MessageBox.Show
-                (
-                    "Rol eliminado"
-                );
+                if (r == DialogResult.Yes)
+                {
+                    objbl.EliminarRol(id);
 
+                    MessageBox.Show
+                    (
+                        "Rol eliminado"
+                    );
+                }
                 MostrarRoles();
 
                 Limpiar();

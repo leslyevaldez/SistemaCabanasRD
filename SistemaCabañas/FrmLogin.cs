@@ -96,5 +96,13 @@ tabla.Rows[0]["Id_Usuario"]);
             textBox2.UseSystemPasswordChar = true;
             textBox2.PasswordChar = '*';
         }
+
+        private void btnVisitante_Click(object sender, EventArgs e)
+        {
+            FrmVisitante frm =
+       new FrmVisitante();
+
+            frm.Show();
+        }
     }
 }

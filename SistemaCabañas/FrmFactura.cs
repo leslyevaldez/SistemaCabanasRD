@@ -24,18 +24,29 @@ namespace SistemaCabañas
 
         private void FrmFactura_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             reportViewer1.LocalReport.ReportPath =
-               @"C:\proyecto2\Sistema2\SistemaCabañas\Reportes\FacturaAlquiler.rdlc";
+    Application.StartupPath +
+    @"\Reportes\FacturaAlquiler.rdlc";
 
             reportViewer1.LocalReport.DataSources.Clear();
 
             ReportDataSource rdsCabecera =
-                new ReportDataSource("DataSet1", dtCabecera);
+            new ReportDataSource
+            (
+                "DataSet1",
+                dtCabecera
+            );
 
             ReportDataSource rdsDetalle =
-                new ReportDataSource("DataSet2", dtDetalle);
+            new ReportDataSource
+            (
+                "DataSet2",
+                dtDetalle
+            );
 
             reportViewer1.LocalReport.DataSources.Add(rdsCabecera);
+
             reportViewer1.LocalReport.DataSources.Add(rdsDetalle);
 
             reportViewer1.RefreshReport();

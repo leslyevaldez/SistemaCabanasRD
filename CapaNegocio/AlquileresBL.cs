@@ -68,5 +68,27 @@ decimal subtotal
                 idAlquiler
             );
         }
+
+        public DataTable FacturaCabecera
+ (
+     int idAlquiler
+ )
+        {
+            return objdal.FacturaCabecera
+            (
+                idAlquiler
+            );
+        }
+
+        public DataTable FacturaDetalle
+        (
+            int idAlquiler
+        )
+        {
+            return objdal.FacturaDetalle
+            (
+                idAlquiler
+            );
+        }
     }
 }

@@ -24,6 +24,7 @@ namespace SistemaCabañas
         public int IdCliente;
 
         public int IdUsuario;
+       public int idAlquilerGenerado = 0;
 
         public int IdHabitacion;
 
@@ -35,7 +36,6 @@ namespace SistemaCabañas
         public FrmAlquileres()
         {
             InitializeComponent();
-            button8.Enabled = false;
         }
 
         private void EstiloBoton(Button boton)
@@ -82,14 +82,12 @@ namespace SistemaCabañas
 
             dataGridView2.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
-
-
-
             comboBoxMetodoPago.Items.Add("Efectivo");
             comboBoxMetodoPago.Items.Add("Tarjeta");
             comboBoxMetodoPago.Items.Add("Transferencia");
 
             comboBoxMetodoPago.SelectedIndex = 0;
+
             comboBox1.Items.Add("Activo");
 
             comboBox1.Items.Add("Finalizado");
@@ -328,11 +326,8 @@ namespace SistemaCabañas
 
                 if (id == 0)
                 {
-                    int idAlquiler =
- objbl.InsertarAlquiler
- (
-     objent
- );
+                    idAlquilerGenerado =
+objbl.InsertarAlquiler(objent);
 
                     foreach (DataGridViewRow row
                     in dataGridView2.Rows)
@@ -359,7 +354,7 @@ namespace SistemaCabañas
 
                             objbl.InsertarDetalle
                             (
-                                idAlquiler,
+                               idAlquilerGenerado,
                                 idServicio,
                                 cantidad,
                                 subtotal
@@ -371,7 +366,19 @@ namespace SistemaCabañas
                     (
                         "Alquiler guardado"
                     );
-                    button8.Enabled = true;
+
+                    FrmPagos frm = new FrmPagos();
+
+                    frm.MetodoPago =
+                    comboBoxMetodoPago.Text;
+
+                    frm.IdAlquilerRecibido =
+                    idAlquilerGenerado;
+
+                    frm.TotalRecibido =
+                    textBox4.Text;
+
+                    frm.ShowDialog();
                 }
                 else
                 {
@@ -395,13 +402,6 @@ namespace SistemaCabañas
                 MessageBox.Show(ex.Message);
             }
 
-            if (comboBoxMetodoPago.Text == "")
-            {
-                MessageBox.Show(
-                "Seleccione método de pago");
-
-                return;
-            }
         }
         public void Limpiar()
         {
@@ -412,6 +412,7 @@ namespace SistemaCabañas
             textBox4.Clear();
 
             comboBox1.SelectedIndex = -1;
+
 
             dataGridView2.Rows.Clear();
 
@@ -428,93 +429,7 @@ namespace SistemaCabañas
 
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            if (dataGridView2.Rows.Count == 0)
-            {
-                MessageBox.Show
-                (
-                    "Agregue servicios"
-                );
-
-                return;
-            }
-
-            FrmFactura frm = new FrmFactura();
-
-            // =====================
-            // CABECERA
-            // =====================
-            DataTable dtCabecera = new DataTable();
-
-            dtCabecera.Columns.Add("FacturaNo");
-            dtCabecera.Columns.Add("Cliente");
-            dtCabecera.Columns.Add("Habitacion");
-            dtCabecera.Columns.Add("Fecha");
-            dtCabecera.Columns.Add("HoraEntrada");
-            dtCabecera.Columns.Add("HoraSalida");
-            dtCabecera.Columns.Add("Estado");
-            dtCabecera.Columns.Add("Empleado");
-            dtCabecera.Columns.Add("MetodoPago");
-            dtCabecera.Columns.Add("Total");
-
-            string numeroFactura =
-            DateTime.Now.ToString("yyyyMMddHHmmss");
-
-
-            dtCabecera.Rows.Add(
-               numeroFactura,
-                textBox1.Text,
-               textBox3.Text,
-               dateTimePicker1.Text,
-                dateTimePicker2.Text,
-                dateTimePicker3.Text,
-               comboBox1.Text,
-                Sesion.Usuario,
-               comboBoxMetodoPago.Text,
-               textBox4.Text
-            );
-
-            // =====================
-            // DETALLE
-            // =====================
-            DataTable dtDetalle = new DataTable();
-
-            dtDetalle.Columns.Add("Servicio");
-            dtDetalle.Columns.Add("Precio");
-            dtDetalle.Columns.Add("Cantidad");
-            dtDetalle.Columns.Add("Subtotal");
-
-            foreach (DataGridViewRow row in dataGridView2.Rows)
-            {
-                if (row.Cells["Servicio"].Value != null)
-                {
-                    decimal precio =
-                        Convert.ToDecimal(row.Cells["Precio"].Value);
-
-                    int cantidad =
-                        Convert.ToInt32(row.Cells["Cantidad"].Value);
-
-                    decimal subtotal = precio * cantidad;
-
-                    dtDetalle.Rows.Add(
-                        row.Cells["Servicio"].Value.ToString(),
-                        precio,
-                        cantidad,
-                        subtotal
-                    );
-                }
-            }
-
-            // ENVIAR DATOS AL REPORTE
-            frm.dtCabecera = dtCabecera;
-            frm.dtDetalle = dtDetalle;
-
-            frm.ShowDialog();
-            Limpiar();
-
-            button8.Enabled = false;
-        }
+       
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
@@ -586,12 +501,18 @@ namespace SistemaCabañas
 
         private void button17_Click(object sender, EventArgs e)
         {
-            FrmPagos frm = new FrmPagos();
+           /* FrmPagos frm = new FrmPagos();
 
             frm.MetodoPago =
             comboBoxMetodoPago.Text;
 
-            frm.Show();
+            frm.IdAlquilerRecibido =
+            idAlquilerGenerado;
+
+            frm.TotalRecibido =
+            textBox4.Text;
+
+            frm.Show();*/
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -713,6 +634,11 @@ namespace SistemaCabañas
             FrmConfiguracion frm = new FrmConfiguracion();
 
             frm.Show();
+        }
+
+        private void comboBoxMetodoPago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

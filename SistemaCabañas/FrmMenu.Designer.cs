@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelContenido = new System.Windows.Forms.Panel();
@@ -70,8 +69,8 @@
             this.btnClientes = new FontAwesome.Sharp.IconButton();
             this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnDashboard = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContenido.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -82,6 +81,7 @@
             this.panelDisponible.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -95,17 +95,6 @@
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1218, 55);
             this.panelTop.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaCabañas.Properties.Resources.usuario;
-            this.pictureBox1.Location = new System.Drawing.Point(1293, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 34);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -122,7 +111,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Firebrick;
-            this.label2.Location = new System.Drawing.Point(207, 20);
+            this.label2.Location = new System.Drawing.Point(151, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 30);
             this.label2.TabIndex = 1;
@@ -227,6 +216,9 @@
             // 
             this.dgvAlquileres.AllowUserToAddRows = false;
             this.dgvAlquileres.AllowUserToDeleteRows = false;
+            this.dgvAlquileres.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAlquileres.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAlquileres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -416,7 +408,7 @@
             this.panel3.Controls.Add(this.panelMenu);
             this.panel3.Controls.Add(this.panelContenido);
             this.panel3.Controls.Add(this.panelTop);
-            this.panel3.Location = new System.Drawing.Point(4, 30);
+            this.panel3.Location = new System.Drawing.Point(2, 30);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1300, 760);
             this.panel3.TabIndex = 12;
@@ -452,7 +444,7 @@
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 24;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(0, 630);
+            this.btnSalir.Location = new System.Drawing.Point(0, 625);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(240, 65);
             this.btnSalir.TabIndex = 10;
@@ -474,9 +466,9 @@
             this.btnConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConfiguracion.IconSize = 24;
             this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracion.Location = new System.Drawing.Point(0, 695);
+            this.btnConfiguracion.Location = new System.Drawing.Point(0, 690);
             this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(240, 65);
+            this.btnConfiguracion.Size = new System.Drawing.Size(240, 70);
             this.btnConfiguracion.TabIndex = 9;
             this.btnConfiguracion.Text = "Configuracion";
             this.btnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -682,14 +674,26 @@
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaCabañas.Properties.Resources.usuario;
+            this.pictureBox1.Location = new System.Drawing.Point(1293, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 34);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1525, 1055);
+            this.ClientSize = new System.Drawing.Size(1521, 1055);
             this.Controls.Add(this.panel3);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMenu";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -698,7 +702,6 @@
             this.Resize += new System.EventHandler(this.FrmMenu_Resize);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelContenido.ResumeLayout(false);
             this.panelContenido.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -716,6 +719,7 @@
             this.panelDisponible.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

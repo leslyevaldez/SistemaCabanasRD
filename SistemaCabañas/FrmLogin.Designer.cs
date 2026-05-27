@@ -36,11 +36,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnVisitante = new System.Windows.Forms.Button();
             this.panelLogin = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +71,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(99, 57);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(249, 35);
@@ -81,7 +81,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(99, 176);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(249, 34);
@@ -96,7 +96,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(99, 293);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(251, 46);
             this.button1.TabIndex = 4;
@@ -121,13 +121,14 @@
             this.btnVisitante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVisitante.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisitante.ForeColor = System.Drawing.Color.White;
-            this.btnVisitante.Location = new System.Drawing.Point(99, 391);
+            this.btnVisitante.Location = new System.Drawing.Point(73, 390);
             this.btnVisitante.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVisitante.Name = "btnVisitante";
-            this.btnVisitante.Size = new System.Drawing.Size(251, 46);
+            this.btnVisitante.Size = new System.Drawing.Size(312, 46);
             this.btnVisitante.TabIndex = 7;
             this.btnVisitante.Text = "Entrar como visitante";
             this.btnVisitante.UseVisualStyleBackColor = false;
+            this.btnVisitante.Click += new System.EventHandler(this.btnVisitante_Click);
             // 
             // panelLogin
             // 
@@ -146,17 +147,6 @@
             this.panelLogin.Size = new System.Drawing.Size(450, 566);
             this.panelLogin.TabIndex = 8;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaCabañas.Properties.Resources.heavylogo;
-            this.pictureBox1.Location = new System.Drawing.Point(-57, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(600, 700);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // panelPrincipal
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.Transparent;
@@ -169,6 +159,17 @@
             this.panelPrincipal.Size = new System.Drawing.Size(1100, 700);
             this.panelPrincipal.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaCabañas.Properties.Resources.heavylogo;
+            this.pictureBox1.Location = new System.Drawing.Point(-57, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(600, 700);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,7 +178,7 @@
             this.ClientSize = new System.Drawing.Size(1105, 750);
             this.Controls.Add(this.panelPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -185,9 +186,9 @@
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

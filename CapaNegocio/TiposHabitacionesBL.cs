@@ -45,5 +45,15 @@ namespace CapaNegocio
         {
             return objdal.BuscarTipoHabitacion(buscar);
         }
+
+        public DataTable MostrarTiposHabitaciones2()
+        {
+            return objdal.MostrarTiposHabitaciones2();
+        }
+
+        public DataTable MostrarServiciosVisitante2()
+        {
+            return objdal.MostrarServiciosVisitante2();
+        }
     }
 }

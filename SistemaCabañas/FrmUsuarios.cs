@@ -14,6 +14,12 @@ namespace SistemaCabañas
             new E_Usuarios();
 
         int id = 0;
+
+        public int IdUsuario;
+
+        public string NombreUsuario;
+
+        public string RolUsuario;
         public FrmUsuarios()
         {
             InitializeComponent();

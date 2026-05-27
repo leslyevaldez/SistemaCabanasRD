@@ -16,7 +16,7 @@ namespace SistemaCabañas
         SqlConnection cn =
 new SqlConnection
 (
-    "Data Source=LAPTOP-1MHMN15C;Initial Catalog=SistemaCabaña;Integrated Security=True"
+    "Data Source=LAPTOP-AAMNP1F2;Initial Catalog=SistemaCabaña;Integrated Security=True"
 );
 
         private void button1_Click(object sender, EventArgs e)
@@ -80,7 +80,7 @@ new SqlConnection
                     SqlConnection cn2 =
                         new SqlConnection
                         (
-                            "Data Source=LAPTOP-1MHMN15C;Initial Catalog=master;Integrated Security=True"
+                            "Data Source=LAPTOP-AAMNP1F2;Initial Catalog=master;Integrated Security=True"
                         );
 
                     cn2.Open();

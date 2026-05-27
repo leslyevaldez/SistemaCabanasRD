@@ -144,7 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1452, 792);
+            this.ClientSize = new System.Drawing.Size(1452, 637);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -155,6 +155,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmBuscarAlquiler";
             this.Text = "FrmBuscarAlquiler";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmBuscarAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelTop.ResumeLayout(false);

@@ -996,6 +996,10 @@ namespace SistemaCabañas {
             
             private global::System.Data.DataColumn columnTotal;
             
+            private global::System.Data.DataColumn columnCedula;
+            
+            private global::System.Data.DataColumn columnTelefono;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CabeceraFacturaDataTable() {
@@ -1111,6 +1115,22 @@ namespace SistemaCabañas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CedulaColumn {
+                get {
+                    return this.columnCedula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TelefonoColumn {
+                get {
+                    return this.columnTelefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1146,7 +1166,7 @@ namespace SistemaCabañas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CabeceraFacturaRow AddCabeceraFacturaRow(string FacturaNo, string Cliente, string Habitacion, string Fecha, string HoraEntrada, string HoraSalida, string Estado, string Empleado, string MetodoPago, string Total) {
+            public CabeceraFacturaRow AddCabeceraFacturaRow(string FacturaNo, string Cliente, string Habitacion, string Fecha, string HoraEntrada, string HoraSalida, string Estado, string Empleado, string MetodoPago, string Total, string Cedula, string Telefono) {
                 CabeceraFacturaRow rowCabeceraFacturaRow = ((CabeceraFacturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FacturaNo,
@@ -1158,7 +1178,9 @@ namespace SistemaCabañas {
                         Estado,
                         Empleado,
                         MetodoPago,
-                        Total};
+                        Total,
+                        Cedula,
+                        Telefono};
                 rowCabeceraFacturaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCabeceraFacturaRow);
                 return rowCabeceraFacturaRow;
@@ -1191,6 +1213,8 @@ namespace SistemaCabañas {
                 this.columnEmpleado = base.Columns["Empleado"];
                 this.columnMetodoPago = base.Columns["MetodoPago"];
                 this.columnTotal = base.Columns["Total"];
+                this.columnCedula = base.Columns["Cedula"];
+                this.columnTelefono = base.Columns["Telefono"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1216,6 +1240,10 @@ namespace SistemaCabañas {
                 base.Columns.Add(this.columnMetodoPago);
                 this.columnTotal = new global::System.Data.DataColumn("Total", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotal);
+                this.columnCedula = new global::System.Data.DataColumn("Cedula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCedula);
+                this.columnTelefono = new global::System.Data.DataColumn("Telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefono);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2473,6 +2501,38 @@ namespace SistemaCabañas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Cedula {
+                get {
+                    try {
+                        return ((string)(this[this.tableCabeceraFactura.CedulaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cedula\' de la tabla \'CabeceraFactura\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCabeceraFactura.CedulaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Telefono {
+                get {
+                    try {
+                        return ((string)(this[this.tableCabeceraFactura.TelefonoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Telefono\' de la tabla \'CabeceraFactura\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCabeceraFactura.TelefonoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsFacturaNoNull() {
                 return this.IsNull(this.tableCabeceraFactura.FacturaNoColumn);
             }
@@ -2589,6 +2649,30 @@ namespace SistemaCabañas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTotalNull() {
                 this[this.tableCabeceraFactura.TotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCedulaNull() {
+                return this.IsNull(this.tableCabeceraFactura.CedulaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCedulaNull() {
+                this[this.tableCabeceraFactura.CedulaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTelefonoNull() {
+                return this.IsNull(this.tableCabeceraFactura.TelefonoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTelefonoNull() {
+                this[this.tableCabeceraFactura.TelefonoColumn] = global::System.Convert.DBNull;
             }
         }
         

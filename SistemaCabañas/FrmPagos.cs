@@ -1,21 +1,28 @@
 ﻿using CapaEntidades;
 using CapaNegocio;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace SistemaCabañas
 {
     public partial class FrmPagos : Form
     {
-
         PagosBL objbl = new PagosBL();
+
+        AlquileresBL objAlquiler =
+new AlquileresBL();
 
         E_Pagos objent = new E_Pagos();
 
         int id = 0;
+       public int idAlquilerSeleccionado = 0;
         public string NombreUsuario;
         public string RolUsuario;
         public string MetodoPago;
+        public int IdAlquilerRecibido;
+
+        public string TotalRecibido;
         public FrmPagos()
         {
             InitializeComponent();
@@ -23,16 +30,17 @@ namespace SistemaCabañas
 
         private void FrmPagos_Load(object sender, EventArgs e)
         {
+            textBox3.Text = MetodoPago;
 
+            textBox1.Text =
+            IdAlquilerRecibido.ToString();
 
-
-
+            textBox2.Text =
+            TotalRecibido;
 
             MostrarPagos();
 
             dataGridView1.ClearSelection();
-
-            textBox3.Text = MetodoPago;
 
             if (RolUsuario == "Empleado")
             {
@@ -89,28 +97,29 @@ namespace SistemaCabañas
 
             textBox2.Clear();
 
-            textBox3.Clear();
-
             id = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             FrmBuscarAlquiler frm =
-       new FrmBuscarAlquiler();
+    new FrmBuscarAlquiler();
 
             frm.ShowDialog();
 
+            idAlquilerSeleccionado =
+            frm.IdAlquiler;
+
             textBox1.Text =
-                frm.IdAlquiler.ToString();
+            frm.IdAlquiler.ToString();
 
             textBox2.Text =
-              frm.Total.ToString("N2");
+            frm.Total.ToString("N2");
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
             if (textBox1.Text == "")
             {
                 MessageBox.Show
@@ -147,8 +156,6 @@ namespace SistemaCabañas
                 return;
             }
 
-          
-
             try
             {
                 objent.Id_Alquiler =
@@ -163,17 +170,15 @@ namespace SistemaCabañas
                 objent.Monto = monto;
 
                 objent.Metodo_Pago =
-                    textBox3.Text;
+                textBox3.Text;
+
 
                 if (id == 0)
                 {
                     objbl.InsertarPago
- (
-     objent
- );
-
-                    AlquileresBL objAlquiler =
-                    new AlquileresBL();
+                    (
+                        objent
+                    );
 
                     objAlquiler.FinalizarAlquiler
                     (
@@ -184,6 +189,23 @@ namespace SistemaCabañas
                     (
                         "Pago guardado"
                     );
+
+                    FrmFactura frm =
+                    new FrmFactura();
+
+                    frm.dtCabecera =
+                    objAlquiler.FacturaCabecera
+                    (
+                        Convert.ToInt32(textBox1.Text)
+                    );
+
+                    frm.dtDetalle =
+                    objAlquiler.FacturaDetalle
+                    (
+                        Convert.ToInt32(textBox1.Text)
+                    );
+
+                    frm.ShowDialog();
                 }
                 else
                 {
@@ -199,7 +221,6 @@ namespace SistemaCabañas
                         "Pago actualizado"
                     );
                 }
-
 
                 MostrarPagos();
 
@@ -387,7 +408,6 @@ namespace SistemaCabañas
         private void btnAlquileres_Click(object sender, EventArgs e)
         {
             FrmAlquileres frm = new FrmAlquileres();
-
             frm.Show();
         }
 
@@ -424,6 +444,65 @@ namespace SistemaCabañas
             FrmLogin frm = new FrmLogin();
 
             frm.Show();
+        }
+
+        private void buttonFactura_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBox1.Text == "")
+                {
+                    MessageBox.Show
+                    (
+                        "Seleccione un alquiler"
+                    );
+
+                    return;
+                }
+
+                int idAlquiler =
+                Convert.ToInt32
+                (
+                    textBox1.Text
+                );
+
+                DataTable dtCabecera =
+                objAlquiler.FacturaCabecera
+                (
+                    idAlquiler
+                );
+
+                DataTable dtDetalle =
+                objAlquiler.FacturaDetalle
+                (
+                    idAlquiler
+                );
+
+                FrmFactura frm =
+                new FrmFactura();
+
+                frm.dtCabecera =
+                dtCabecera;
+
+                frm.dtDetalle =
+                dtDetalle;
+
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -31,7 +31,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panelFormulario = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -125,21 +124,6 @@
             this.button7.Text = "Limpiar";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Gray;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(948, 779);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(125, 46);
-            this.button8.TabIndex = 32;
-            this.button8.Text = "Reporte";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label10
             // 
@@ -239,6 +223,7 @@
             this.comboBoxMetodoPago.Name = "comboBoxMetodoPago";
             this.comboBoxMetodoPago.Size = new System.Drawing.Size(121, 24);
             this.comboBoxMetodoPago.TabIndex = 33;
+            this.comboBoxMetodoPago.SelectedIndexChanged += new System.EventHandler(this.comboBoxMetodoPago_SelectedIndexChanged);
             // 
             // textBox3
             // 
@@ -437,7 +422,6 @@
             this.panelContenido.Controls.Add(this.panelServicios);
             this.panelContenido.Controls.Add(this.panelFormulario);
             this.panelContenido.Controls.Add(this.label10);
-            this.panelContenido.Controls.Add(this.button8);
             this.panelContenido.Controls.Add(this.button7);
             this.panelContenido.Controls.Add(this.button6);
             this.panelContenido.Controls.Add(this.button5);
@@ -790,7 +774,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panelFormulario;
         private System.Windows.Forms.Label label1;

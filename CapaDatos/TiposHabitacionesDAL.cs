@@ -172,5 +172,43 @@ namespace CapaDatos
 
             return tabla;
         }
+
+        public DataTable MostrarTiposHabitaciones2()
+        {
+            SqlDataAdapter da =
+ new SqlDataAdapter
+ (
+     "SP_MostrarTiposHabitaciones2",
+     cn.AbrirConexion()
+ );
+            da.SelectCommand.CommandType =
+                CommandType.StoredProcedure;
+
+            DataTable dt =
+                new DataTable();
+
+            da.Fill(dt);
+
+            return dt;
+        }
+        public DataTable MostrarServiciosVisitante2()
+        {
+            SqlDataAdapter da =
+new SqlDataAdapter
+(
+    "SP_MostrarServiciosVisitante2",
+    cn.AbrirConexion()
+);
+
+            da.SelectCommand.CommandType =
+                CommandType.StoredProcedure;
+
+            DataTable dt =
+                new DataTable();
+
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

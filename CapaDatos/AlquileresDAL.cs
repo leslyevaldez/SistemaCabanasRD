@@ -277,5 +277,66 @@ decimal subtotal
 
             cn.CerrarConexion();
         }
+
+        public DataTable FacturaCabecera(int idAlquiler)
+        {
+            DataTable tabla = new DataTable();
+
+            cmd.Connection = cn.AbrirConexion();
+
+            cmd.CommandText =
+            "SP_FacturaCabecera";
+
+            cmd.CommandType =
+            CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue
+            (
+                "@Id_Alquiler",
+                idAlquiler
+            );
+
+            SqlDataReader dr =
+            cmd.ExecuteReader();
+
+            tabla.Load(dr);
+
+            cmd.Parameters.Clear();
+
+            cn.CerrarConexion();
+
+            return tabla;
+        }
+
+        public DataTable FacturaDetalle(int idAlquiler)
+        {
+            DataTable tabla = new DataTable();
+
+            cmd.Connection = cn.AbrirConexion();
+
+            cmd.CommandText =
+            "SP_FacturaDetalle";
+
+            cmd.CommandType =
+            CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue
+            (
+                "@Id_Alquiler",
+                idAlquiler
+            );
+
+            SqlDataReader dr =
+            cmd.ExecuteReader();
+
+            tabla.Load(dr);
+
+            cmd.Parameters.Clear();
+
+            cn.CerrarConexion();
+
+            return tabla;
+        }
+
     }
 }

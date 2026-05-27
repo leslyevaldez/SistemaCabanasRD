@@ -74,7 +74,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(425, 519);
+            this.textBox1.Location = new System.Drawing.Point(143, 48);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(243, 38);
@@ -84,7 +84,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(143, 48);
+            this.textBox2.Location = new System.Drawing.Point(425, 522);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(337, 38);
@@ -193,10 +193,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(312, 195);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(943, 286);
@@ -493,11 +493,11 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1353, 901);
             this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRoles";
             this.Text = "FrmRoles";

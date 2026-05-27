@@ -335,6 +335,12 @@ namespace SistemaCabañas
         {
             FrmAlquileres frm = new FrmAlquileres();
 
+            frm.IdUsuario = this.IdUsuario;
+
+            frm.NombreUsuario = this.NombreUsuario;
+
+            frm.RolUsuario = this.RolUsuario;
+
             frm.Show();
         }
 
