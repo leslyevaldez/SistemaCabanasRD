@@ -23,6 +23,7 @@ namespace SistemaCabañas
 
         private void FrmBuscarHabitacion_Load(object sender, EventArgs e)
         {
+            DiseñoTabla(dataGridView1);
             MostrarHabitaciones();
 
             dataGridView1.ClearSelection();
@@ -35,6 +36,54 @@ namespace SistemaCabañas
             dataGridView1.MultiSelect = false;
         }
 
+        private void DiseñoTabla
+(
+    DataGridView tabla
+)
+        {
+            tabla.EnableHeadersVisualStyles = false;
+
+            tabla.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.Firebrick;
+
+            tabla.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            tabla.ColumnHeadersDefaultCellStyle.Font =
+                new Font
+                (
+                    "Segoe UI",
+                    11,
+                    FontStyle.Bold
+                );
+
+            tabla.DefaultCellStyle.Font =
+                new Font
+                (
+                    "Segoe UI",
+                    10
+                );
+
+            tabla.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            tabla.SelectionMode =
+                DataGridViewSelectionMode.FullRowSelect;
+
+            tabla.RowTemplate.Height = 35;
+
+            tabla.RowHeadersVisible = false;
+
+            tabla.AllowUserToAddRows = false;
+
+            tabla.ReadOnly = true;
+
+            tabla.BorderStyle =
+                BorderStyle.None;
+
+            tabla.BackgroundColor =
+                Color.White;
+        }
         public void MostrarHabitaciones()
         {
             dataGridView1.DataSource =

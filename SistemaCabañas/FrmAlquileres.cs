@@ -141,7 +141,7 @@ namespace SistemaCabañas
 
             comboBox1.SelectedIndex = -1;
 
-
+            comboBoxMetodoPago.SelectedIndex = -1;
             dataGridView2.ClearSelection();
 
 
@@ -152,7 +152,7 @@ namespace SistemaCabañas
                 btnReportes.Visible = true;
             }
 
-            if (RolUsuario == "Usuario")
+            if (RolUsuario == "Recepcionista")
             {
                 button4.Visible = false;
                 button5.Visible = false;
@@ -160,6 +160,8 @@ namespace SistemaCabañas
             }
 
         }
+
+
 
 
 
@@ -413,7 +415,7 @@ objbl.InsertarAlquiler(objent);
 
             comboBox1.SelectedIndex = -1;
 
-
+            comboBoxMetodoPago.SelectedIndex = -1;
             dataGridView2.Rows.Clear();
 
             id = 0;
@@ -501,18 +503,6 @@ objbl.InsertarAlquiler(objent);
 
         private void button17_Click(object sender, EventArgs e)
         {
-           /* FrmPagos frm = new FrmPagos();
-
-            frm.MetodoPago =
-            comboBoxMetodoPago.Text;
-
-            frm.IdAlquilerRecibido =
-            idAlquilerGenerado;
-
-            frm.TotalRecibido =
-            textBox4.Text;
-
-            frm.Show();*/
         }
 
         private void button2_Click(object sender, EventArgs e)

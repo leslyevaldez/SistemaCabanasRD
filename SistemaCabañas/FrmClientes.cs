@@ -94,6 +94,7 @@ new Font("Segoe UI", 10);
 
             try
             {
+                DiseñoTabla(dataGridView1);
                 MostrarClientes();
             }
             catch (Exception ex)
@@ -108,7 +109,7 @@ new Font("Segoe UI", 10);
                 btnUsuarios.Visible = false;
             }
 
-            if (RolUsuario == "Usuario")
+            if (RolUsuario == "Recepcionista")
             {
                 btnConfiguracion.Visible = false;
                 btnUsuarios.Visible = false;
@@ -116,6 +117,54 @@ new Font("Segoe UI", 10);
 
         }
 
+        private void DiseñoTabla
+(
+    DataGridView tabla
+)
+        {
+            tabla.EnableHeadersVisualStyles = false;
+
+            tabla.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.Firebrick;
+
+            tabla.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            tabla.ColumnHeadersDefaultCellStyle.Font =
+                new Font
+                (
+                    "Segoe UI",
+                    11,
+                    FontStyle.Bold
+                );
+
+            tabla.DefaultCellStyle.Font =
+                new Font
+                (
+                    "Segoe UI",
+                    10
+                );
+
+            tabla.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            tabla.SelectionMode =
+                DataGridViewSelectionMode.FullRowSelect;
+
+            tabla.RowTemplate.Height = 35;
+
+            tabla.RowHeadersVisible = false;
+
+            tabla.AllowUserToAddRows = false;
+
+            tabla.ReadOnly = true;
+
+            tabla.BorderStyle =
+                BorderStyle.None;
+
+            tabla.BackgroundColor =
+                Color.White;
+        }
         public void MostrarClientes()
         {
             dataGridView1.DataSource =

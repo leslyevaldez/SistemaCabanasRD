@@ -1,4 +1,5 @@
 ﻿using CapaNegocio;
+using FontAwesome.Sharp;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -152,19 +153,24 @@ namespace SistemaCabañas
 
             lblBienvenida.Text =
    "Bienvenido, " + NombreUsuario + " 👋";
+            if (RolUsuario == "Recepcionista")
+            {
+                btnUsuarios.Visible = false;
+
+                btnConfiguracion.Visible = false;
+
+            }
 
             if (RolUsuario == "Empleado")
             {
-                btnConfiguracion.Visible = false;
                 btnUsuarios.Visible = false;
-            }
 
-            if (RolUsuario == "Usuario")
-            {
                 btnConfiguracion.Visible = false;
-                btnUsuarios.Visible = false;
-            }
 
+                btnReportes.Visible = false;
+
+                btnPagos.Visible = false;
+            }
 
             lblFecha.Text =
             DateTime.Now.ToString("dd/MM/yyyy");

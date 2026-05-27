@@ -188,7 +188,7 @@
             this.button1.Location = new System.Drawing.Point(339, 45);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.Size = new System.Drawing.Size(103, 36);
             this.button1.TabIndex = 17;
             this.button1.Text = "Buscar Cliente";
             this.button1.UseVisualStyleBackColor = false;
@@ -208,7 +208,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 101);
+            this.label3.Location = new System.Drawing.Point(23, 111);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 23);
@@ -218,7 +218,7 @@
             // comboBoxMetodoPago
             // 
             this.comboBoxMetodoPago.FormattingEnabled = true;
-            this.comboBoxMetodoPago.Location = new System.Drawing.Point(196, 420);
+            this.comboBoxMetodoPago.Location = new System.Drawing.Point(236, 420);
             this.comboBoxMetodoPago.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxMetodoPago.Name = "comboBoxMetodoPago";
             this.comboBoxMetodoPago.Size = new System.Drawing.Size(121, 24);
@@ -227,7 +227,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(132, 101);
+            this.textBox3.Location = new System.Drawing.Point(126, 111);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(191, 22);
@@ -239,7 +239,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(339, 101);
+            this.button3.Location = new System.Drawing.Point(339, 106);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(103, 33);

@@ -1,6 +1,7 @@
-﻿using System;
-using CapaEntidades;
+﻿using CapaEntidades;
 using CapaNegocio;
+using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SistemaCabañas
@@ -18,10 +19,59 @@ namespace SistemaCabañas
             InitializeComponent();
         }
 
+        private void DiseñoTabla
+(
+    DataGridView tabla
+)
+        {
+            tabla.EnableHeadersVisualStyles = false;
+
+            tabla.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.Firebrick;
+
+            tabla.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            tabla.ColumnHeadersDefaultCellStyle.Font =
+                new Font
+                (
+                    "Segoe UI",
+                    11,
+                    FontStyle.Bold
+                );
+
+            tabla.DefaultCellStyle.Font =
+                new Font
+                (
+                    "Segoe UI",
+                    10
+                );
+
+            tabla.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            tabla.SelectionMode =
+                DataGridViewSelectionMode.FullRowSelect;
+
+            tabla.RowTemplate.Height = 35;
+
+            tabla.RowHeadersVisible = false;
+
+            tabla.AllowUserToAddRows = false;
+
+            tabla.ReadOnly = true;
+
+            tabla.BorderStyle =
+                BorderStyle.None;
+
+            tabla.BackgroundColor =
+                Color.White;
+        }
         private void FrmRoles_Load(object sender, EventArgs e)
         {
             try
             {
+                DiseñoTabla(dataGridView1);
                 MostrarRoles();
             }
             catch (Exception ex)

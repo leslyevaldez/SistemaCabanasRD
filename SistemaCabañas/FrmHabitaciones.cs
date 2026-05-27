@@ -98,7 +98,7 @@ new Font("Segoe UI", 10);
 DataGridViewCellBorderStyle.SingleHorizontal;
 
 
-
+            DiseñoTabla(dataGridView1);
 
             MostrarHabitaciones();
 
@@ -112,7 +112,7 @@ DataGridViewCellBorderStyle.SingleHorizontal;
                 btnUsuarios.Visible = false;
             }
 
-            if (RolUsuario == "Usuario")
+            if (RolUsuario == "Recepcionista")
             {
                 btnConfiguracion.Visible = false;
                 btnUsuarios.Visible = false;
@@ -122,6 +122,54 @@ DataGridViewCellBorderStyle.SingleHorizontal;
 
         }
 
+        private void DiseñoTabla
+(
+    DataGridView tabla
+)
+        {
+            tabla.EnableHeadersVisualStyles = false;
+
+            tabla.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.Firebrick;
+
+            tabla.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            tabla.ColumnHeadersDefaultCellStyle.Font =
+                new Font
+                (
+                    "Segoe UI",
+                    11,
+                    FontStyle.Bold
+                );
+
+            tabla.DefaultCellStyle.Font =
+                new Font
+                (
+                    "Segoe UI",
+                    10
+                );
+
+            tabla.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            tabla.SelectionMode =
+                DataGridViewSelectionMode.FullRowSelect;
+
+            tabla.RowTemplate.Height = 35;
+
+            tabla.RowHeadersVisible = false;
+
+            tabla.AllowUserToAddRows = false;
+
+            tabla.ReadOnly = true;
+
+            tabla.BorderStyle =
+                BorderStyle.None;
+
+            tabla.BackgroundColor =
+                Color.White;
+        }
         public void MostrarHabitaciones()
         {
             dataGridView1.DataSource =
