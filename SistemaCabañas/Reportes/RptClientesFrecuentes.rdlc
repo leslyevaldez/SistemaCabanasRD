@@ -161,11 +161,11 @@
               <BackgroundColor>Maroon</BackgroundColor>
             </Style>
           </Rectangle>
-          <Chart Name="Chart1">
+          <Chart Name="Chart2">
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart1_CategoryGroup">
+                  <Group Name="Chart2_CategoryGroup">
                     <GroupExpressions>
                       <GroupExpression>=Fields!Nombre.Value</GroupExpression>
                     </GroupExpressions>
@@ -175,21 +175,6 @@
                       <Value>=Fields!Nombre.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <ChartMembers>
-                    <ChartMember>
-                      <Group Name="Chart1_CategoryGroup1">
-                        <GroupExpressions>
-                          <GroupExpression>=Fields!Nombre.Value</GroupExpression>
-                        </GroupExpressions>
-                      </Group>
-                      <SortExpressions>
-                        <SortExpression>
-                          <Value>=Fields!Nombre.Value</Value>
-                        </SortExpression>
-                      </SortExpressions>
-                      <Label>=Fields!Nombre.Value</Label>
-                    </ChartMember>
-                  </ChartMembers>
                   <Label>=Fields!Nombre.Value</Label>
                 </ChartMember>
               </ChartMembers>
@@ -207,7 +192,7 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!TotalVisitas.Value)</Y>
+                        <Y>=Count(Fields!TotalVisitas.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -219,7 +204,6 @@
                       <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
-                  <Type>Bar</Type>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -522,7 +506,7 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
-            <Top>5.6007cm</Top>
+            <Top>5.30437cm</Top>
             <Left>4.6482cm</Left>
             <Height>5cm</Height>
             <Width>9.89184cm</Width>

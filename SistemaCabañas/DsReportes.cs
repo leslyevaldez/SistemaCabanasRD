@@ -4,6 +4,10 @@
 
     partial class DsReportes
     {
+        partial class FacturaCabeceraNuevaDataTable
+        {
+        }
+
         partial class DetalleFacturaDataTable
         {
         }

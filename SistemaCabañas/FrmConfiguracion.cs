@@ -122,15 +122,7 @@ SET MULTI_USER;
 
         private void FrmConfiguracion_Load(object sender, EventArgs e)
         {
-            if (RolUsuario != "Administrador")
-            {
-                this.Close();
-
-                MessageBox.Show
-                (
-                    "No tiene permisos"
-                );
-            }
+           
         }
 
         private void btnDashboard_Click_1(object sender, EventArgs e)
