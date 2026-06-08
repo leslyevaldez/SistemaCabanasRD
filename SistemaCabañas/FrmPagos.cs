@@ -1,6 +1,7 @@
 ﻿using CapaEntidades;
 using CapaNegocio;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace SistemaCabañas
@@ -16,6 +17,10 @@ namespace SistemaCabañas
         public string NombreUsuario;
         public string RolUsuario;
         public string MetodoPago;
+        public DataTable dtCabecera;
+        public DataTable dtDetalle;
+        public int IdAlquiler;
+        public decimal TotalPago;
         public FrmPagos()
         {
             InitializeComponent();
@@ -32,6 +37,9 @@ namespace SistemaCabañas
 
             dataGridView1.ClearSelection();
 
+            textBox1.Text = IdAlquiler.ToString();
+
+            textBox2.Text = TotalPago.ToString("N2");
             textBox3.Text = MetodoPago;
 
             if (RolUsuario == "Empleado")
@@ -184,6 +192,11 @@ namespace SistemaCabañas
                     (
                         "Pago guardado"
                     );
+                    int idAlq = Convert.ToInt32(textBox1.Text);
+
+                    FrmFactura frm = new FrmFactura();
+                    frm.IdAlquiler = Convert.ToInt32(textBox1.Text);
+                    frm.ShowDialog();
                 }
                 else
                 {
@@ -212,6 +225,8 @@ namespace SistemaCabañas
                 MessageBox.Show(ex.Message);
             }
         }
+
+
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {

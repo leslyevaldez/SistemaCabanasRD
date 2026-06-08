@@ -21,13 +21,15 @@ namespace SistemaCabañas
 
         int id = 0;
 
-        public int IdCliente;
+        int idAlquilerGenerado = 0;
+
+        public int IdCliente = 0;
 
         public int IdUsuario;
 
-        public int IdHabitacion;
+        public int IdHabitacion = 0;
 
-
+        public decimal TotalPago;
         decimal precioHabitacion = 0;
 
         public string NombreUsuario;
@@ -167,16 +169,12 @@ namespace SistemaCabañas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmBuscarCliente frm =
-        new FrmBuscarCliente();
-
+            FrmBuscarCliente frm = new FrmBuscarCliente();
             frm.ShowDialog();
 
-            IdCliente =
-                frm.IdCliente;
+            IdCliente = frm.IdCliente;
 
-            textBox1.Text =
-                frm.Cliente;
+            textBox1.Text = frm.Cliente;
         }
 
 
@@ -298,15 +296,9 @@ namespace SistemaCabañas
 
                     return;
                 }
-
-                objent.Id_Cliente =
-     IdCliente;
-
-                objent.Id_Usuario =
-    IdUsuario;
-                
-                objent.Id_Habitacion =
-      IdHabitacion;
+                objent.Id_Cliente = IdCliente;
+                objent.Id_Habitacion = IdHabitacion;
+                objent.Id_Usuario = Sesion.IdUsuario;
 
                 objent.Fecha =
                     dateTimePicker1.Value;
@@ -328,11 +320,19 @@ namespace SistemaCabañas
 
                 if (id == 0)
                 {
-                    int idAlquiler =
- objbl.InsertarAlquiler
- (
-     objent
- );
+                    FrmPagos frm = new FrmPagos();
+
+                    idAlquilerGenerado =
+objbl.InsertarAlquiler
+(
+    objent
+);
+
+                    frm.IdAlquiler = idAlquilerGenerado;
+
+                    frm.MetodoPago = comboBoxMetodoPago.Text;
+
+                    frm.TotalPago = Convert.ToDecimal(textBox4.Text);
 
                     foreach (DataGridViewRow row
                     in dataGridView2.Rows)
@@ -359,7 +359,7 @@ namespace SistemaCabañas
 
                             objbl.InsertarDetalle
                             (
-                                idAlquiler,
+                                idAlquilerGenerado,
                                 idServicio,
                                 cantidad,
                                 subtotal
@@ -371,7 +371,8 @@ namespace SistemaCabañas
                     (
                         "Alquiler guardado"
                     );
-                    button8.Enabled = true;
+
+                    frm.ShowDialog();
                 }
                 else
                 {
@@ -430,7 +431,7 @@ namespace SistemaCabañas
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (dataGridView2.Rows.Count == 0)
+            if (dataGridView2.Rows.Count <= 1)
             {
                 MessageBox.Show
                 (
@@ -440,7 +441,6 @@ namespace SistemaCabañas
                 return;
             }
 
-            FrmFactura frm = new FrmFactura();
 
             // =====================
             // CABECERA
@@ -506,14 +506,12 @@ namespace SistemaCabañas
                 }
             }
 
-            // ENVIAR DATOS AL REPORTE
+            FrmFactura frm = new FrmFactura();
+
             frm.dtCabecera = dtCabecera;
             frm.dtDetalle = dtDetalle;
 
             frm.ShowDialog();
-            Limpiar();
-
-            button8.Enabled = false;
         }
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)

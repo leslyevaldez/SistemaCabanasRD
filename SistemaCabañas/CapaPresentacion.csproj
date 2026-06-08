@@ -261,6 +261,9 @@
     <Content Include="Reportes\FacturaAlquiler.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Reportes\FacturaAlquiler2.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RptClientesFrecuentes.rdlc" />
     <EmbeddedResource Include="Reportes\RptGananciasFecha.rdlc" />
     <EmbeddedResource Include="Reportes\RptServiciosConsumidos.rdlc" />

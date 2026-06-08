@@ -32,13 +32,13 @@ namespace CapaDatos
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.Connection = cn.AbrirConexion();
-                cmd.CommandText = "SP_InsertarAlquiler";
+                cmd.CommandText = "SP_InsertarAlquiler5";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Id_Cliente", obj.Id_Cliente);
 
                 // 👇 Aquí usamos el IdUsuario de la sesión
-                cmd.Parameters.AddWithValue("@Id_Usuario", Sesion.IdUsuario);
+                cmd.Parameters.AddWithValue("@Id_Usuario", obj.Id_Usuario);
 
                 cmd.Parameters.AddWithValue("@Id_Habitacion", obj.Id_Habitacion);
                 cmd.Parameters.AddWithValue("@Fecha", obj.Fecha);

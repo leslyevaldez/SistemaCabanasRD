@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using CapaNegocio;
 using Microsoft.Reporting.WinForms;
+using System;
+using System.Data;
+using System.Windows.Forms;
+using System.IO;
 
 
 namespace SistemaCabañas
 {
     public partial class FrmFactura : Form
     {
-
+        public int IdAlquiler;
         public DataTable dtCabecera;
         public DataTable dtDetalle;
         public FrmFactura()
@@ -24,19 +20,29 @@ namespace SistemaCabañas
 
         private void FrmFactura_Load(object sender, EventArgs e)
         {
-            reportViewer1.LocalReport.ReportPath =
-               @"C:\proyecto2\Sistema2\SistemaCabañas\Reportes\FacturaAlquiler.rdlc";
 
             reportViewer1.LocalReport.DataSources.Clear();
 
-            ReportDataSource rdsCabecera =
-                new ReportDataSource("DataSet1", dtCabecera);
+            reportViewer1.ProcessingMode = ProcessingMode.Local;
 
-            ReportDataSource rdsDetalle =
-                new ReportDataSource("DataSet2", dtDetalle);
+            string ruta = Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory,
+                "Reportes",
+                "FacturaAlquiler2.rdlc"
+            );
 
-            reportViewer1.LocalReport.DataSources.Add(rdsCabecera);
-            reportViewer1.LocalReport.DataSources.Add(rdsDetalle);
+            reportViewer1.LocalReport.ReportPath = ruta;
+
+            AlquileresBL bl = new AlquileresBL();
+
+            DataTable cabecera = bl.ObtenerCabeceraFactura(IdAlquiler);
+            DataTable detalle = bl.ObtenerDetalleFactura(IdAlquiler);
+
+            reportViewer1.LocalReport.DataSources.Add(
+                new ReportDataSource("CabeceraFactura2", cabecera));
+
+            reportViewer1.LocalReport.DataSources.Add(
+                new ReportDataSource("DetalleFactura2", detalle));
 
             reportViewer1.RefreshReport();
         }
