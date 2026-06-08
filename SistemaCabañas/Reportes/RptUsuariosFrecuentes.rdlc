@@ -330,7 +330,7 @@
                   </ChartAxis>
                 </ChartValueAxes>
                 <Style>
-                  <BackgroundColor>#00ffffff</BackgroundColor>
+                  <BackgroundColor>Black</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>
                 </Style>
               </ChartArea>
@@ -368,7 +368,7 @@
                 <Position>TopLeft</Position>
               </ChartTitle>
             </ChartTitles>
-            <Palette>Pacific</Palette>
+            <Palette>Chocolate</Palette>
             <ChartBorderSkin>
               <Style>
                 <BackgroundColor>Gray</BackgroundColor>
@@ -386,8 +386,8 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
-            <Top>5.49486cm</Top>
-            <Left>7.05653cm</Left>
+            <Top>6.06636cm</Top>
+            <Left>2.33636cm</Left>
             <Height>5cm</Height>
             <Width>9.89184cm</Width>
             <Style>
@@ -441,7 +441,7 @@
                 <KeepTogether>true</KeepTogether>
                 <Top>2.53528cm</Top>
                 <Height>0.9125cm</Height>
-                <Width>24cm</Width>
+                <Width>19.08933cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -466,7 +466,7 @@
             <KeepTogether>true</KeepTogether>
             <Top>0.02448cm</Top>
             <Height>3.44778cm</Height>
-            <Width>24cm</Width>
+            <Width>19.08933cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -477,9 +477,9 @@
           </Rectangle>
           <Rectangle Name="Rectangle2">
             <KeepTogether>true</KeepTogether>
-            <Top>14.68354cm</Top>
+            <Top>16.84254cm</Top>
             <Height>2.5cm</Height>
-            <Width>24cm</Width>
+            <Width>19.08933cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -507,8 +507,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>4.18544cm</Top>
-            <Left>7.05653cm</Left>
+            <Top>4.62675cm</Top>
+            <Left>2.33636cm</Left>
             <Height>0.727cm</Height>
             <Width>9.89184cm</Width>
             <ZIndex>3</ZIndex>
@@ -522,11 +522,59 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Resumen:</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> Este reporte muestra la cantidad de alquileres registrados por cada usuario del sistema. Permite identificar cuáles usuarios han realizado más operaciones y evaluar su participación dentro de la gestión de alquileres.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>12.3317cm</Top>
+            <Left>2.33636cm</Left>
+            <Height>1.91233cm</Height>
+            <Width>14.16283cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>6.76517in</Height>
+        <Height>7.62351in</Height>
         <Style />
       </Body>
-      <Width>24cm</Width>
+      <Width>19.08933cm</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

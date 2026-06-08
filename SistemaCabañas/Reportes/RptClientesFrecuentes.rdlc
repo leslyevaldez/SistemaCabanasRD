@@ -47,7 +47,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Analisis De Clientes Que Mas Nos Visitan.</Value>
+                    <Value>Analisis De Clientes Mas Frecuentes:</Value>
                     <Style>
                       <FontFamily>Segoe UI</FontFamily>
                       <FontSize>13pt</FontSize>
@@ -59,8 +59,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>4.22487cm</Top>
-            <Left>4.6482cm</Left>
+            <Top>4.60587cm</Top>
+            <Left>2.00237cm</Left>
             <Height>0.727cm</Height>
             <Width>9.89184cm</Width>
             <Style>
@@ -115,7 +115,7 @@
                 <KeepTogether>true</KeepTogether>
                 <Top>2.60583cm</Top>
                 <Height>0.9125cm</Height>
-                <Width>24cm</Width>
+                <Width>19.44917cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -139,7 +139,7 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Height>3.51833cm</Height>
-            <Width>24cm</Width>
+            <Width>19.4915cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -149,10 +149,44 @@
             </Style>
           </Rectangle>
           <Rectangle Name="Rectangle2">
+            <ReportItems>
+              <Textbox Name="Textbox3">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Sistema de Gestión de Cabañas |
+Reporte generado en Power BI</Value>
+                        <Style>
+                          <Color>Black</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox3</rd:DefaultName>
+                <Top>0.41161cm</Top>
+                <Left>2.00237cm</Left>
+                <Height>1.21383cm</Height>
+                <Width>9.37917cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+            </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>10.77709cm</Top>
+            <Top>13.90976cm</Top>
             <Height>3.51833cm</Height>
-            <Width>24cm</Width>
+            <Width>19.4915cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -450,7 +484,7 @@
                   </ChartAxis>
                 </ChartValueAxes>
                 <Style>
-                  <BackgroundColor>#00ffffff</BackgroundColor>
+                  <BackgroundColor>Black</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>
                 </Style>
               </ChartArea>
@@ -488,7 +522,7 @@
                 <Position>TopLeft</Position>
               </ChartTitle>
             </ChartTitles>
-            <Palette>Pacific</Palette>
+            <Palette>Chocolate</Palette>
             <ChartBorderSkin>
               <Style>
                 <BackgroundColor>Gray</BackgroundColor>
@@ -506,8 +540,8 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
-            <Top>5.30437cm</Top>
-            <Left>4.6482cm</Left>
+            <Top>6.33476cm</Top>
+            <Left>2.00237cm</Left>
             <Height>5cm</Height>
             <Width>9.89184cm</Width>
             <ZIndex>3</ZIndex>
@@ -520,11 +554,59 @@
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Resumen:</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> Este reporte permite identificar los clientes que han realizado más alquileres, mostrando su nivel de recurrencia dentro del sistema. Esto ayuda a conocer los clientes más frecuentes y valiosos para el negocio.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>11.67553cm</Top>
+            <Left>2.00237cm</Left>
+            <Height>1.89117cm</Height>
+            <Width>14.79783cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>20.02166cm</Height>
+        <Height>17.42809cm</Height>
         <Style />
       </Body>
-      <Width>24cm</Width>
+      <Width>19.4915cm</Width>
       <Page>
         <PageHeight>20cm</PageHeight>
         <PageWidth>27cm</PageWidth>

@@ -330,7 +330,7 @@
                   </ChartAxis>
                 </ChartValueAxes>
                 <Style>
-                  <BackgroundColor>#00ffffff</BackgroundColor>
+                  <BackgroundColor>Black</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>
                 </Style>
               </ChartArea>
@@ -386,8 +386,8 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
-            <Top>5.20279cm</Top>
-            <Left>6.0922cm</Left>
+            <Top>5.66846cm</Top>
+            <Left>2.3457cm</Left>
             <Height>5.381cm</Height>
             <Width>10.39984cm</Width>
             <Style>
@@ -442,7 +442,7 @@
                 <KeepTogether>true</KeepTogether>
                 <Top>2.53528cm</Top>
                 <Height>0.9125cm</Height>
-                <Width>23.72783cm</Width>
+                <Width>19.79083cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -466,7 +466,7 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Height>3.44778cm</Height>
-            <Width>23.749cm</Width>
+            <Width>19.79083cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -476,10 +476,43 @@
             </Style>
           </Rectangle>
           <Rectangle Name="Rectangle2">
+            <ReportItems>
+              <Textbox Name="Textbox3">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Sistema de Gestión de Cabañas |
+Reporte generado en Power BI</Value>
+                        <Style>
+                          <Color>Black</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox3</rd:DefaultName>
+                <Top>0.62192cm</Top>
+                <Left>0.93016cm</Left>
+                <Height>1.21383cm</Height>
+                <Width>9.37917cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+            </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>12.62285cm</Top>
-            <Height>2.5cm</Height>
-            <Width>24cm</Width>
+            <Top>14.6891cm</Top>
+            <Height>2.45767cm</Height>
+            <Width>19.79083cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -489,7 +522,6 @@
             </Style>
           </Rectangle>
           <Textbox Name="Textbox7">
-            <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
@@ -507,8 +539,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>4.04409cm</Top>
-            <Left>6.6002cm</Left>
+            <Top>4.36159cm</Top>
+            <Left>2.3457cm</Left>
             <Height>0.727cm</Height>
             <Width>9.89184cm</Width>
             <ZIndex>3</ZIndex>
@@ -522,11 +554,58 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox4">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Resumen:</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> Este reporte muestra las ganancias obtenidas por fecha a partir de los pagos registrados en el sistema. Permite visualizar la evolución de los ingresos en diferentes períodos, identificar las fechas con mayor rentabilidad y analizar el comportamiento financiero del negocio para apoyar la toma de decisiones.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Times New Roman</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox4</rd:DefaultName>
+            <Top>11.84487cm</Top>
+            <Left>2.21403cm</Left>
+            <Height>2.42033cm</Height>
+            <Width>15.37167cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>5.95388in</Height>
+        <Height>6.77054in</Height>
         <Style />
       </Body>
-      <Width>24cm</Width>
+      <Width>19.79083cm</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
